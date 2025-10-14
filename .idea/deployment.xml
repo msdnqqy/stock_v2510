@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="shangong@shangong-pc:2222 password" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="shangong@shangong-pc:2222 password">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/mnt/d/stock_v2510" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="shangong@shangong-pc:2222 password (3)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/mnt/d/stock_v2510" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
