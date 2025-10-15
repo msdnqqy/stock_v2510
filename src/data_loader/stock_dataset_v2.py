@@ -18,6 +18,13 @@ class TransformedDataset(Dataset):
         datas = df.loc[:,['open', 'high', 'close', 'low','market_cap','volume']].values
 
         log_return = np.diff(np.log(datas + 1e-8), axis=0)  # shape: (n-1, m)
+
+        # 检查 nan/inf
+        if not np.isfinite(log_return).all():
+            print("Warning: log_return contains nan or inf!")
+            # 可选：替换 inf 为大数，nan 为 0
+            log_return = np.nan_to_num(log_return, nan=0.0, posinf=1e6, neginf=-1e6)
+
         self.datas = log_return
 
         self.days = days
@@ -38,9 +45,9 @@ class TransformedDataset(Dataset):
         y = y[:, 2]  # 只取 close 的 return，shape: (label_days,)
 
         # 如果 label_days == 1，可 squeeze 成标量
-        if self.label_days == 1:
-            y = y.item()  # 或 y = y[0]
-
+        # if self.label_days == 1:
+        #     y = y.item()  # 或 y = y[0]
+        y = np.array([y])  # 转为 shape (1,)
         return torch.tensor(x, dtype=torch.float32), torch.tensor(y, dtype=torch.float32)
 
 
