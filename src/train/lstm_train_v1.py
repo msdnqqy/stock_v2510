@@ -59,7 +59,8 @@ class LSTMReturnPredictor(nn.Module):
     def forward(self, x):
         out, _ = self.lstm(x)  # (B, L, H)
         out = self.fc(out[:, -1, :])  # (B, 1)
-        return out.squeeze(-1)  # (B,)
+        return out
+        # return out.squeeze(-1)  # (B,)
 
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
