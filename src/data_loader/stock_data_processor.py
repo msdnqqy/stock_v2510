@@ -32,14 +32,14 @@ class StockDataProcessor:
         """
         try:
             # Read the CSV file without header
-            df = pd.read_csv(file_path, header=None, encoding='utf-8')
+            df = pd.read_csv(file_path, header=None, encoding='gbk')
 
             # Skip if file is empty or has only one line (header)
             if len(df) <= 1:
                 return False
 
             # Remove the first row (original header) and last row
-            df = df.iloc[1:-1]
+            df = df.iloc[:-1]
 
             # Set new column names
             df.columns = self.new_columns
@@ -78,4 +78,7 @@ class StockDataProcessor:
 if __name__ == "__main__":
     # Example usage
     processor = StockDataProcessor()
+    processor.process_all_files()
+
+    processor = StockDataProcessor(input_dir='/mnt/d/projects/stock_v2510/data/industry', output_dir='/mnt/d/projects/stock_v2510/data/industry_pre')
     processor.process_all_files()
