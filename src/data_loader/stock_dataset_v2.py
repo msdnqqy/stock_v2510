@@ -15,7 +15,7 @@ class TransformedDataset(Dataset):
         print(df.columns)
         print(df.shape)
 
-        datas = df.loc[:,['open', 'high', 'close', 'low','market_cap','volume']].values
+        datas = df.loc[:,['open', 'high', 'low', 'close', 'vol', 'amount']].values + 10.0
 
         log_return = np.diff(np.log(datas + 1e-8), axis=0)  # shape: (n-1, m)
 

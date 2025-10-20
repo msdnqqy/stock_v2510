@@ -19,6 +19,7 @@ from torch.utils.data import DataLoader, Subset
 
 # 1. 创建完整数据集
 full_dataset = TransformedDataset(
+    file_paths = '../../data/stock_pre/SH#600031.csv',
     days=32,
     label_days=1
 )
@@ -54,11 +55,24 @@ class LSTMReturnPredictor(nn.Module):
     def __init__(self, input_size=6, hidden_size=2048, num_layers=4, output_size=1):
         super().__init__()
         self.lstm = nn.LSTM(input_size, hidden_size, num_layers, batch_first=True, dropout=0.2)
-        self.fc = nn.Linear(hidden_size, output_size)
+
+        self.net = nn.Sequential(
+            nn.Linear(hidden_size, 2048),
+            nn.ReLU(),
+            nn.Linear(2048, 2048),
+            nn.ReLU(),
+            nn.Dropout(0.3),
+            nn.Linear(2048, 256),
+            nn.ReLU(),
+            nn.Dropout(0.3),
+            nn.Linear(256, output_size)  # 输出 logits
+        )
+
 
     def forward(self, x):
         out, _ = self.lstm(x)  # (B, L, H)
-        out = self.fc(out[:, -1, :])  # (B, 1)
+        out = self.net(out[:, -1, :])  # (B, 1)
+
         return out
         # return out.squeeze(-1)  # (B,)
 
@@ -66,7 +80,7 @@ class LSTMReturnPredictor(nn.Module):
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = LSTMReturnPredictor().to(device)
 criterion = nn.MSELoss()
-optimizer = optim.Adam(model.parameters(), lr=1e-4)
+optimizer = optim.Adam(model.parameters(), lr=1e-6)
 
 # ----------------------------
 # 6. 训练循环
@@ -83,7 +97,7 @@ for epoch in range(epochs):
         y_pred = model(X_batch)
         loss = criterion(y_pred, y_batch)
         loss.backward()
-        # torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)  # 👈 关键！
+        torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)  # 👈 关键！
         optimizer.step()
         total_train_loss += loss.item()
 
@@ -97,6 +111,7 @@ for epoch in range(epochs):
             loss = criterion(y_pred, y_batch)
             total_val_loss += loss.item()
 
+    # print(total_train_loss,len(train_loader),total_val_loss,len(val_loader))
     train_losses.append(total_train_loss / len(train_loader))
     val_losses.append(total_val_loss / len(val_loader))
 
