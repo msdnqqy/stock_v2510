@@ -76,37 +76,37 @@ data_loaders = get_datasets(paths = ['./data/stock_pre/SH#600031.csv'
     ,'./data/stock_pre/SH#600436.csv'
     ,'./data/stock_pre/SH#600519.csv'
 
-    ,'./data/stock_pre/SH#600585.csv'
-    ,'./data/stock_pre/SH#600660.csv'
-    ,'./data/stock_pre/SH#600690.csv'
-    ,'./data/stock_pre/SH#600809.csv'
-    ,'./data/stock_pre/SH#600887.csv'
-    ,'./data/stock_pre/SH#600893.csv'
-    ,'./data/stock_pre/SH#600900.csv'
-    ,'./data/stock_pre/SH#600919.csv'
-    ,'./data/stock_pre/SH#600941.csv'
-    ,'./data/stock_pre/SH#601012.csv'
-    ,'./data/stock_pre/SH#601088.csv'
-    ,'./data/stock_pre/SH#601138.csv'
-    ,'./data/stock_pre/SH#601166.csv'
+    # ,'./data/stock_pre/SH#600585.csv'
+    # ,'./data/stock_pre/SH#600660.csv'
+    # ,'./data/stock_pre/SH#600690.csv'
+    # ,'./data/stock_pre/SH#600809.csv'
+    # ,'./data/stock_pre/SH#600887.csv'
+    # ,'./data/stock_pre/SH#600893.csv'
+    # ,'./data/stock_pre/SH#600900.csv'
+    # ,'./data/stock_pre/SH#600919.csv'
+    # ,'./data/stock_pre/SH#600941.csv'
+    # ,'./data/stock_pre/SH#601012.csv'
+    # ,'./data/stock_pre/SH#601088.csv'
+    # ,'./data/stock_pre/SH#601138.csv'
+    # ,'./data/stock_pre/SH#601166.csv'
                                      ])
 # ----------------------------
 # 5. LSTM 模型（预测 log return）
 # ----------------------------
 class LSTMReturnPredictor(nn.Module):
-    def __init__(self, input_size=6, hidden_size=2048, num_layers=4, output_size=1):
+    def __init__(self, input_size=6, hidden_size=1024, num_layers=3, output_size=1):
         super().__init__()
         self.lstm = nn.LSTM(input_size, hidden_size, num_layers, batch_first=True, dropout=0.2)
 
         self.net = nn.Sequential(
             nn.Linear(hidden_size, 2048),
             nn.ReLU(),
-            nn.Linear(2048, 2048),
-            nn.ReLU(),
-            nn.Dropout(0.3),
+            # nn.Linear(2048, 2048),
+            # nn.ReLU(),
+            nn.Dropout(0.1),
             nn.Linear(2048, 256),
             nn.ReLU(),
-            nn.Dropout(0.3),
+            nn.Dropout(0.2),
             nn.Linear(256, output_size)  # 输出 logits
         )
 

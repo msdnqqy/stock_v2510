@@ -15,9 +15,14 @@ class TransformedDataset(Dataset):
         print(df.columns)
         print(df.shape)
 
-        datas = df.loc[:,['open', 'high', 'low', 'close', 'vol', 'amount']].values + 10.0
+        columns = ['open', 'high', 'low', 'close', 'vol', 'amount']
+        for col in columns:
+            if df.loc[:,col].min() <=0:
+                df.loc[:,col] = df.loc[:,col] - 2*df.loc[:,col].min()
 
-        log_return = np.diff(np.log(datas + 1e-8), axis=0)  # shape: (n-1, m)
+        datas = df.loc[:,columns].values
+
+        log_return = np.diff(np.log(datas + 1), axis=0)  # shape: (n-1, m)
 
         # 检查 nan/inf
         if not np.isfinite(log_return).all():
