@@ -99,15 +99,15 @@ class LSTMReturnPredictor(nn.Module):
         self.lstm = nn.LSTM(input_size, hidden_size, num_layers, batch_first=True, dropout=0.2)
 
         self.net = nn.Sequential(
-            nn.Linear(hidden_size, 2048),
+            nn.Linear(hidden_size, 1024),
             nn.ReLU(),
             # nn.Linear(2048, 2048),
             # nn.ReLU(),
             nn.Dropout(0.1),
-            nn.Linear(2048, 256),
+            nn.Linear(1024, 128),
             nn.ReLU(),
             nn.Dropout(0.2),
-            nn.Linear(256, output_size)  # 输出 logits
+            nn.Linear(128, output_size)  # 输出 logits
         )
 
 
@@ -122,7 +122,7 @@ class LSTMReturnPredictor(nn.Module):
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = LSTMReturnPredictor().to(device)
 criterion = nn.MSELoss()
-optimizer = optim.Adam(model.parameters(), lr=1e-3)
+optimizer = optim.Adam(model.parameters(), lr=1e-5)
 
 # ----------------------------
 # 6. 训练循环
