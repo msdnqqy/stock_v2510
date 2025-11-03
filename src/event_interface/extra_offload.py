@@ -5,6 +5,8 @@ from pathlib import Path
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 from json_repair import repair_json
 
+from time import time
+
 # ===== WSL 专属内存优化 =====
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:128"
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
@@ -21,12 +23,11 @@ OFFLOAD_DIR.mkdir(exist_ok=True, parents=True)
 MODEL_NAME = "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B"  # 正式模型ID
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-# === 自动检测 GPU 显存（可选，也可手动设置）===
+# === 更激进但更高效的 GPU 内存分配 ===
 if DEVICE == "cuda":
-    total_mem = torch.cuda.get_device_properties(0).total_memory  # 字节
-    # 保留 1.5GB 余量给系统/驱动，避免 OOM
-    available_gpu_mem = total_mem - 3 * 1024**3  # 约 1.5GB
-    gpu_mem_gb = int(available_gpu_mem // (1024**3))
+    total_mem_gb = torch.cuda.get_device_properties(0).total_memory / (1024**3)
+    # 保守只留 0.8~1.0GB 给系统（WSL 驱动开销较小）
+    gpu_mem_gb = max(1, int(total_mem_gb - 0.8))  # 16GB GPU → 15GB
     GPU_MEM = f"{gpu_mem_gb}GB"
 else:
     GPU_MEM = "0GB"
@@ -47,22 +48,39 @@ print(f"🧠 内存策略: GPU={MAX_MEMORY[0]}, CPU={MAX_MEMORY['cpu']}")
 print(f"🚀 启动 {MODEL_NAME}")
 print(f"🧠 内存策略: GPU={MAX_MEMORY[0]}, CPU={MAX_MEMORY['cpu']}")
 
+
+from transformers import BitsAndBytesConfig
+
+# === 8-bit 量化配置 ===
+quantization_config = BitsAndBytesConfig(
+    load_in_8bit=True,
+    bnb_8bit_compute_dtype=torch.bfloat16,  # 计算仍用 bfloat16 保证精度
+    bnb_8bit_use_double_quant=True,        # 嵌套量化，进一步省显存
+)
+
 # === 加载 Tokenizer ===
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True)
 
 # === 智能加载模型（优先 GPU，不足时 offload 到 CPU）===
 model = AutoModelForCausalLM.from_pretrained(
     MODEL_NAME,
-    dtype=torch.bfloat16,
-    device_map="auto",              # 关键：自动分配
+    quantization_config=quantization_config,  # 开启量化
+    device_map="cuda:0",  # 强制全放 GPU
+    # dtype=torch.bfloat16,
+    # device_map="auto",              # 关键：自动分配
     max_memory=MAX_MEMORY,          # 告诉 transformers 各设备的内存上限
     offload_folder=str(OFFLOAD_DIR) if 'OFFLOAD_DIR' in globals() else "./offload",  # 可选
     offload_state_dict=True,        # 允许在 CPU 上暂存状态（节省 GPU）
     trust_remote_code=True,
     use_cache=True,
     low_cpu_mem_usage=True,         # 减少 CPU 内存峰值
+    attn_implementation="flash_attention_2",  # ←←← 关键！
     # load_in_4bit=False  # 默认就是 False，可省略
 )
+
+
+# 加速策略
+model = torch.compile(model, mode="reduce-overhead")
 
 # 创建 pipeline (无 device 参数)
 text_generator = pipeline(
@@ -167,11 +185,21 @@ def extract_causal_relations(text: str, max_retries=2):
             if attempt > 0:
                 print(f"  ♻️  重试 #{attempt} (清理缓存后)")
 
+            # 在 text_generator 调用前后加计时
+            start_time = time()
             response = text_generator(
                 prompt,
                 return_full_text=False,
                 clean_up_tokenization_spaces=True
             )[0]['generated_text']
+            end_time = time()
+
+            # 计算 token 数（注意：这是生成的 token，不含 prompt）
+            generated_tokens = len(tokenizer.encode(response, add_special_tokens=False))
+            duration = end_time - start_time
+            tokens_per_sec = generated_tokens / duration if duration > 0 else 0
+
+            print(f"⏱️  生成 {generated_tokens} tokens，耗时 {duration:.2f}s，速度: {tokens_per_sec:.2f} tokens/s")
 
             # 修复 JSON
             repaired = repair_json(response, return_objects=True)
