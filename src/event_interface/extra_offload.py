@@ -80,7 +80,11 @@ model = AutoModelForCausalLM.from_pretrained(
 )
 
 # 加速策略
-model = torch.compile(model, mode="reduce-overhead")
+model.eval()  # ✅ 启用推理模式
+torch.set_float32_matmul_precision('high')  # ✅ 启用 TF32
+
+# ===== 验证 Flash Attention =====
+print(f"⚡ Flash Attention 状态: {getattr(model.config, '_attn_implementation', 'unknown')}")
 
 # 创建 pipeline (无 device 参数)
 text_generator = pipeline(
@@ -120,46 +124,46 @@ def extract_causal_relations(text: str, max_retries=2):
                 }
             ]
         },
-
-        # 示例2: 医疗干预效果 (隐性因果)
-        {
-            "input": "临床试验显示，每日服用维生素D补充剂6个月后，参与者骨折风险降低了22%。",
-            "output": [
-                {
-                    "event": "每日服用维生素D补充剂6个月",
-                    "entity": "骨折风险",
-                    "effect": "正面：降低22%"
-                }
-            ]
-        },
-
-        # 示例3: 无明确因果关系 (边界情况)
-        {
-            "input": "会议将于下周三举行，地点在总部大楼3楼会议室。",
-            "output": []
-        },
-
-        # 示例4: 复杂链式因果 (高级模式)
-        {
-            "input": "供应链中断引发芯片短缺，迫使汽车制造商减产，进而导致二手车价格上涨30%。",
-            "output": [
-                {
-                    "event": "供应链中断",
-                    "entity": "芯片供应",
-                    "effect": "负面：短缺"
-                },
-                {
-                    "event": "芯片短缺",
-                    "entity": "汽车产量",
-                    "effect": "负面：减产"
-                },
-                {
-                    "event": "汽车减产",
-                    "entity": "二手车价格",
-                    "effect": "负面：上涨30%"
-                }
-            ]
-        }
+        #
+        # # 示例2: 医疗干预效果 (隐性因果)
+        # {
+        #     "input": "临床试验显示，每日服用维生素D补充剂6个月后，参与者骨折风险降低了22%。",
+        #     "output": [
+        #         {
+        #             "event": "每日服用维生素D补充剂6个月",
+        #             "entity": "骨折风险",
+        #             "effect": "正面：降低22%"
+        #         }
+        #     ]
+        # },
+        #
+        # # 示例3: 无明确因果关系 (边界情况)
+        # {
+        #     "input": "会议将于下周三举行，地点在总部大楼3楼会议室。",
+        #     "output": []
+        # },
+        #
+        # # 示例4: 复杂链式因果 (高级模式)
+        # {
+        #     "input": "供应链中断引发芯片短缺，迫使汽车制造商减产，进而导致二手车价格上涨30%。",
+        #     "output": [
+        #         {
+        #             "event": "供应链中断",
+        #             "entity": "芯片供应",
+        #             "effect": "负面：短缺"
+        #         },
+        #         {
+        #             "event": "芯片短缺",
+        #             "entity": "汽车产量",
+        #             "effect": "负面：减产"
+        #         },
+        #         {
+        #             "event": "汽车减产",
+        #             "entity": "二手车价格",
+        #             "effect": "负面：上涨30%"
+        #         }
+        #     ]
+        # }
     ]
 
     # 构建 prompt (同前文)
