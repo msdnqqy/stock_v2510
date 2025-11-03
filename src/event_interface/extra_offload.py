@@ -4,7 +4,7 @@ import torch
 from pathlib import Path
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 from json_repair import repair_json
-
+from transformers import AutoConfig
 from time import time
 
 # ===== WSL 专属内存优化 =====
@@ -51,33 +51,33 @@ print(f"🧠 内存策略: GPU={MAX_MEMORY[0]}, CPU={MAX_MEMORY['cpu']}")
 
 from transformers import BitsAndBytesConfig
 
-# === 8-bit 量化配置 ===
-quantization_config = BitsAndBytesConfig(
-    load_in_8bit=True,
-    bnb_8bit_compute_dtype=torch.bfloat16,  # 计算仍用 bfloat16 保证精度
-    bnb_8bit_use_double_quant=True,        # 嵌套量化，进一步省显存
-)
+
 
 # === 加载 Tokenizer ===
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True)
 
-# === 智能加载模型（优先 GPU，不足时 offload 到 CPU）===
+print("🔧 修复模型配置...")
+config = AutoConfig.from_pretrained(MODEL_NAME, trust_remote_code=True)
+if hasattr(config, 'rope_scaling') and config.rope_scaling:
+    if config.rope_scaling.get('rope_type') == 'yarn':
+        config.rope_scaling.pop('attn_factor', None)
+        config.rope_scaling['factor'] = 4.0
+        config.rope_scaling['original_max_position_embeddings'] = 32768
+
+print("🚀 加载 8-bit 模型...")
 model = AutoModelForCausalLM.from_pretrained(
     MODEL_NAME,
-    quantization_config=quantization_config,  # 开启量化
-    device_map="cuda:0",  # 强制全放 GPU
-    # dtype=torch.bfloat16,
-    # device_map="auto",              # 关键：自动分配
-    max_memory=MAX_MEMORY,          # 告诉 transformers 各设备的内存上限
-    offload_folder=str(OFFLOAD_DIR) if 'OFFLOAD_DIR' in globals() else "./offload",  # 可选
-    offload_state_dict=True,        # 允许在 CPU 上暂存状态（节省 GPU）
+    config=config,  # 使用修复后的配置
+    quantization_config=BitsAndBytesConfig(
+        load_in_8bit=True,
+        bnb_8bit_compute_dtype=torch.bfloat16,
+        bnb_8bit_use_double_quant=True,
+    ),
+    device_map="cuda:0",  # 强制全 GPU
     trust_remote_code=True,
-    use_cache=True,
-    low_cpu_mem_usage=True,         # 减少 CPU 内存峰值
-    attn_implementation="flash_attention_2",  # ←←← 关键！
-    # load_in_4bit=False  # 默认就是 False，可省略
+    # use_cache=True,
+    attn_implementation="flash_attention_2",  # 显式启用
 )
-
 
 # 加速策略
 model = torch.compile(model, mode="reduce-overhead")
@@ -87,14 +87,17 @@ text_generator = pipeline(
     "text-generation",
     model=model,
     tokenizer=tokenizer,
+    # device=0,  # 显式指定 GPU
+    framework="pt",
+    batch_size=1,
+    # 生成参数
     max_new_tokens=128,
     temperature=0.2,
     top_p=0.85,
     do_sample=True,
-    pad_token_id=tokenizer.eos_token_id,
-    # 重要: 禁用 tqdm 避免 offload 时卡顿
-    batch_size=1
+    pad_token_id=tokenizer.eos_token_id
 )
+
 
 
 def extract_causal_relations(text: str, max_retries=2):
@@ -171,11 +174,11 @@ def extract_causal_relations(text: str, max_retries=2):
         {"role": "user", "content": user_prompt}
     ]
 
-    prompt = tokenizer.apply_chat_template(
-        messages,
-        tokenize=False,
-        add_generation_prompt=True
-    )
+    # prompt = tokenizer.apply_chat_template(
+    #     messages,
+    #     tokenize=False,
+    #     add_generation_prompt=True
+    # )
 
     # Offload 专用重试机制
     for attempt in range(max_retries + 1):
@@ -185,34 +188,20 @@ def extract_causal_relations(text: str, max_retries=2):
             if attempt > 0:
                 print(f"  ♻️  重试 #{attempt} (清理缓存后)")
 
-            # 在 text_generator 调用前后加计时
             start_time = time()
             response = text_generator(
-                prompt,
-                return_full_text=False,
-                clean_up_tokenization_spaces=True
+                messages,  # ← 直接传入消息
+                return_full_text=False
             )[0]['generated_text']
-            end_time = time()
+            duration = time() - start_time
 
-            # 计算 token 数（注意：这是生成的 token，不含 prompt）
-            generated_tokens = len(tokenizer.encode(response, add_special_tokens=False))
-            duration = end_time - start_time
-            tokens_per_sec = generated_tokens / duration if duration > 0 else 0
-
-            print(f"⏱️  生成 {generated_tokens} tokens，耗时 {duration:.2f}s，速度: {tokens_per_sec:.2f} tokens/s")
+            # 速度监控
+            gen_tokens = len(tokenizer.encode(response))
+            print(f"⚡ 速度: {gen_tokens / duration:.1f} token/s ({gen_tokens} tokens in {duration:.2f}s)")
 
             # 修复 JSON
             repaired = repair_json(response, return_objects=True)
             return _validate_results(repaired)
-
-        except torch.cuda.OutOfMemoryError:
-            print(f"  ⚠️  OOM 错误 (尝试 {attempt + 1}/{max_retries + 1})")
-            torch.cuda.empty_cache()
-
-            # 动态降低 max_new_tokens
-            if attempt == 0:
-                text_generator.tokenizer.model_max_length = 256
-                print("  ⚙️  自动降低生成长度至 256 tokens")
 
         except Exception as e:
             print(f"  ❌  处理失败 (尝试 {attempt + 1}): {str(e)}")
