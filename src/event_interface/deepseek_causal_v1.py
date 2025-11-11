@@ -4,8 +4,9 @@ import re
 
 # --- 1. 推荐模型 ---
 # 14B 模型对于“遵循 CoT + JSON”指令的能力远胜 8B
-# MODEL_NAME = "deepseek-r1:14b"  # 确保您已导入或 'ollama pull qwen1.5:14b'
-MODEL_NAME = "deepseek-r1:8b"  # 确保您已导入或 'ollama pull qwen1.5:14b'
+MODEL_NAME = "deepseek-r1:14b"  # 确保您已导入或 'ollama pull qwen1.5:14b'
+# MODEL_NAME = "deepseek-r1:8b"  # 确保您已导入或 'ollama pull qwen1.5:14b'
+# MODEL_NAME = "gemma3:27b-it-qat"  # https://ollama.com/library/gemma3
 
 # --- 2. 示例新闻 (模拟输入) ---
 NEWS_ARTICLE = """
@@ -48,6 +49,7 @@ def create_master_prompt_with_cot(article):
         ### 新闻正文
         {article}
         
+        Let's think step by step,请一步一步思考，最后给出中文答案。
         ### 分析开始:
         """
 
@@ -80,7 +82,12 @@ def extract_causal_info_with_cot(article_text):
             print(
                 f"估算速度: {response_tokens / total_duration_s :.2f} tokens/秒")  # 注意：这个速度不准，因为 total_duration 包括了提示处理
 
+
         raw_response = response['message']['content']
+        # print("--- 模型回复 ---")
+        # print(raw_response)
+        # print("\n--- 模型回复end ---")
+
         # --- 新的解析逻辑 ---
         # 1. 提取 <think> 块
         think_match = re.search(r"<think>(.*?)</think>", raw_response, re.DOTALL)
@@ -108,16 +115,16 @@ def extract_causal_info_with_cot(article_text):
 
             print("\n【步骤 2: 最终 JSON 输出】")
             print("\n【目标 1：结构化摘要】")
-            print(extracted_data.get("summary"))
+            print(parsed_data.get("summary"))
 
             print("\n【目标 2：因果关系提取】")
-            print(json.dumps(extracted_data.get("causal_events"), indent=2, ensure_ascii=False))
+            print(json.dumps(parsed_data.get("causal_events"), indent=2, ensure_ascii=False))
 
         return think_text, parsed_data
 
     except Exception as e:
         print(f"错误：无法解析模型输出或连接 Ollama。 {e}")
-        print(f"原始回复: {raw_response}")
+        # print(f"原始回复: {raw_response}")
         return None, None
 
 
