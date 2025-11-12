@@ -2,6 +2,8 @@ import ollama
 import json
 import re
 
+# 实验结果： https://www.yuque.com/g/u21187361/eakfyp/oprwk6b1p7tkkewl/collaborator/join?token=bq4jCYMk6Pre5ufL&source=doc_collaborator# 《因果关系提取-v1112-few shot版》
+
 # --- 1. 推荐模型 ---
 # 14B 模型对于“遵循 CoT + JSON”指令的能力远胜 8B
 # MODEL_NAME = "deepseek-r1:14b"  # 确保您已导入或 'ollama pull qwen1.5:14b'
