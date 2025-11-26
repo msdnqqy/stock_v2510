@@ -5,7 +5,8 @@ from llama_cpp import Llama, GGML_TYPE_Q8_0
 # ================= 配置区域 =================
 # 你的配置保持不变
 MODEL_PATH = "/home/shangong/.cache/huggingface/hub/models--Qwen--Qwen3-30B-A3B-GGUF/snapshots/e4d4bafdfb96a411a163846265362aceb0b9c63a/Qwen3-30B-A3B-Q4_K_M.gguf"
-N_GPU_LAYERS = 35
+# N_GPU_LAYERS = 35
+N_GPU_LAYERS = 42
 CONTEXT_SIZE = 8192
 
 
