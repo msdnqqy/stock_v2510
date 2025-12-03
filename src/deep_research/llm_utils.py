@@ -48,7 +48,7 @@ def chat_stream( prompt, prompt_template = None):
     
 
     messages = [
-        # {"role": "system", "content": "你是一个乐于助人的智能助手。"},
+        {"role": "system", "content": "你是一个基于 Qwen3-32B 模型的【首席金融情报专家】。你拥有 20 年的华尔街从业经验，擅长通过“二阶思维 (Second-order Thinking)”挖掘新闻背后的隐形逻辑。让我们一步步思考，详细解释你的推理"},
         {"role": "user", "content":  prompt_template.replace('[prompt]', prompt) if prompt_template is not None else prompt}
     ]
 
