@@ -12,7 +12,7 @@ from test_data import *
 if __name__ == "__main__":
     # 测试模型
     # test_prompt = """某半导体公司宣布研发出 2nm 制程芯片，良率达到 90%，预计明年量产。"""
-    test_prompt = news_list[1]
+    test_prompt = news_list[-1]
     extract_result = chat_stream(PROMPT.replace('[输入文本]', test_prompt))
     print("finnal result:\t",extract_result)
 
