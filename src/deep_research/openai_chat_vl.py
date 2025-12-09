@@ -30,7 +30,7 @@ if mime_type is None:
 print("mime_type",mime_type,"base64:",base64_image)
 
 
-client = OpenAI(base_url="http://localhost:8080/v1", api_key="sk-xxx")
+client = OpenAI(base_url="http://localhost:8080/v1", api_key="sk-xxx",timeout=600.0)
 
 token_count = 0
 first_token_time = None
@@ -43,7 +43,7 @@ response = client.chat.completions.create(
     model="qwen3-vl",
     messages=[
         {"role": "user", "content": [
-            {"type": "text", "text": "推理三一重工股价走势图中的买点和卖点，并说明买点和卖点的推理原因，而后根据推理原因，验证买点和卖点的正确性(准确率)"},
+            {"type": "text", "text": "你是一个从业二十年的金融投资专家,现在你要推理三一重工股价走势图中的买点和卖点，并说明买点和卖点的推理原因，而后根据推理原因，验证买点和卖点的正确性(准确率)。最后根据验证后的推理原因，总结出三一重工判断某一天是否为买点或卖点的规则"},
             {
                 "type": "image_url",
                 "image_url": {
