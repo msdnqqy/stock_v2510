@@ -14,7 +14,8 @@ def encode_image(image_path):
 # 假设你的 python 脚本在 stock_v2510 根目录下运行
 # image_path = "/mnt/d/projects/stock_v2510/src/deep_research/qwen3vl_arc.jpg"
 # image_path = '/mnt/d/projects/stock_v2510/src/deep_research/image.png'
-image_path = '/mnt/d/projects/stock_v2510/src/deep_research/image_1.png'
+# image_path = '/mnt/d/projects/stock_v2510/src/deep_research/image_1.png'
+image_path = '/mnt/d/projects/stock_v2510/src/deep_research/image_2.png'
 
 # 检查文件是否存在
 if not os.path.exists(image_path):
@@ -27,7 +28,7 @@ base64_image = encode_image(image_path)
 mime_type, _ = mimetypes.guess_type(image_path)
 if mime_type is None:
     mime_type = 'image/jpeg' # 默认回退到 jpeg
-print("mime_type",mime_type,"base64:",base64_image)
+print("mime_type",mime_type,"base64:",len(base64_image))
 
 
 client = OpenAI(base_url="http://localhost:8080/v1", api_key="sk-xxx",timeout=600.0)
