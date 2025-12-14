@@ -98,8 +98,7 @@ SYSTEM_PROMPT_1 = """
   "step_4_volume": "描述成交量变化...",
   "is_bottom_reversal": true/false,
   "confidence_score": 0-100,
-  "reasoning_summary": "一句话总结理由",
-  "CoT":"思考过程"
+  "reasoning_summary": "一句话总结理由"
 }
 """
 
