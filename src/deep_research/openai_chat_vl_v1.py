@@ -15,7 +15,9 @@ def encode_image(image_path):
 # image_path = "/mnt/d/projects/stock_v2510/src/deep_research/qwen3vl_arc.jpg"
 # image_path = '/mnt/d/projects/stock_v2510/src/deep_research/image.png'
 # image_path = '/mnt/d/projects/stock_v2510/src/deep_research/image_1.png'
-image_path = '/mnt/d/projects/stock_v2510/src/deep_research/image_2.png'
+# image_path = '/mnt/d/projects/stock_v2510/src/deep_research/image_2.png'
+image_path = '/mnt/d/projects/stock_v2510/src/deep_research/images/image20.png'
+image_path19 = '/mnt/d/projects/stock_v2510/src/deep_research/images/image19.png'
 
 # 检查文件是否存在
 if not os.path.exists(image_path):
@@ -44,12 +46,19 @@ response = client.chat.completions.create(
     model="qwen3-vl",
     messages=[
         {"role": "user", "content": [
-            {"type": "text", "text": "你是一个从业二十年的金融投资专家,让我们一步步思考，现在你要推理三一重工股价走势图中的买点和卖点，并说明买点和卖点的推理原因，而后根据推理原因，验证买点和卖点的正确性(准确率)。最后根据验证后的推理原因，总结出三一重工判断某一天是否为买点和卖点的规则"},
+            {"type": "text", "text": """你是一个从业二十年的金融投资专家,让我们一步步思考，现在你要推理三一重工股价走势图中的买点和卖点，并说明买点和卖点的推理原因，而后根据推理原因，验证买点和卖点的正确性(准确率)。最后根据验证后的推理原因，总结出三一重工判断某一天是否为买点和卖点的规则"""},
             {
                 "type": "image_url",
                 "image_url": {
                     # 关键点：使用 data URI scheme 格式
                     "url": f"data:{mime_type};base64,{base64_image}"
+                },
+            },
+            {
+                "type": "image_url",
+                "image_url": {
+                    # 关键点：使用 data URI scheme 格式
+                    "url": f"data:{mime_type};base64,{encode_image(image_path19)}"
                 },
             },
         ]}
