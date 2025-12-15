@@ -1,17 +1,36 @@
-from openai import OpenAI
-import os
 import base64
-import sys
-import time  # <--- 新增 1: 导入 time 模块
-import mimetypes  # 引入这个库来自动判断文件类型
+import io
+import os
+import time
+
+from PIL import Image
+from openai import OpenAI
+
 from config import *
 
 
-# 1. 定义一个函数将本地图片转为 Base64
+# --- 1. 增强版图片处理函数 (防止坏图导致 500) ---
 def encode_image(image_path):
-    with open(image_path, "rb") as image_file:
-        return base64.b64encode(image_file.read()).decode('utf-8')
+    try:
+        # 使用 PIL 打开并强制转换为 RGB (去除透明通道，防止服务端报错)
+        with Image.open(image_path) as img:
+            if img.mode in ('RGBA', 'P'):
+                img = img.convert('RGB')
 
+            # 限制最大尺寸 (可选，防止显存爆显存)
+            img.thumbnail((512, 512))
+
+            byte_arr = io.BytesIO()
+            img.save(byte_arr, format='JPEG', quality=95)  # 统一转为 JPEG
+            return base64.b64encode(byte_arr.getvalue()).decode('utf-8')
+    except Exception as e:
+        print(f"❌ 图片处理失败 {image_path}: {e}")
+        return None
+
+
+def get_type(path):
+    # 既然我们在 encode_image 里强制转为了 JPEG，这里直接返回 jpeg 即可
+    return 'image/jpeg'
 
 image_path = './dataset/sample2/img.png'
 
@@ -34,11 +53,11 @@ few_shot_1_cot = """
 """
 
 
-def get_type(path):
-    mime_type_temp, _ = mimetypes.guess_type(path)
-    if mime_type_temp is None:
-        mime_type_temp = 'image/jpeg'  # 默认回退到 jpeg
-    return mime_type_temp
+# def get_type(path):
+#     mime_type_temp, _ = mimetypes.guess_type(path)
+#     if mime_type_temp is None:
+#         mime_type_temp = 'image/jpeg'  # 默认回退到 jpeg
+#     return mime_type_temp
 
 
 client = OpenAI(base_url="http://localhost:8080/v1", api_key="sk-xxx", timeout=6000)
@@ -65,7 +84,7 @@ response = client.chat.completions.create(
         "<|im_start|>",
         "<|im_end|>",  # Qwen 标准结束符
         "<|endoftext|>",  # 通用结束符
-        "```json",  # 防止它输出完代码块后继续废话
+        # "```json",  # 防止它输出完代码块后继续废话
         # "}"                # 【绝招】如果你只需要一个 JSON，可以在检测到右大括号时强制停止（需慎用，防止嵌套结构未闭合）
     ],
     # response_format={"type": "json_object"},
@@ -73,7 +92,7 @@ response = client.chat.completions.create(
         {
             "role": "system",
             # 使用加强版的 Prompt
-            "content": SYSTEM_PROMPT_2
+            "content": SYSTEM_PROMPT_1
         },
         {
             "role": "user",
