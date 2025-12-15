@@ -43,6 +43,7 @@ SYSTEM_PROMPT_1 = """
 # Task
 分析提供的图片（K线图），通过以下思维链（CoT）判断该图表是否满足“底部反转突破”形态。
 
+<think>
 # Analysis Logic (CoT)
 在分析图表时，请严格遵循以下步骤（Thinking Process）：
 1.  **Trend Context (趋势背景):** 左侧是否为下跌趋势或长期低位震荡？
@@ -86,6 +87,7 @@ SYSTEM_PROMPT_1 = """
         位置： DIF 值 < 0 且 DEA 值 < 0（即“水下”）。
         金叉： 当日 DIF > DEA，且前一日 DIF ≤ DEA。
         动能： MACD 红柱值 > 0，且 红柱值 > 前一日红柱值。
+</think>
 
 # Output Format
 请严格以 JSON 格式输出分析结果，不要输出任何Markdown代码块标记之外的废话：

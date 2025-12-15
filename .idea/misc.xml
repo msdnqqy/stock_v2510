@@ -3,7 +3,7 @@
   <component name="Black">
     <option name="sdkName" value="Remote Python 3.12.11 (sftp://shangong@shangong-pc:2222/home/shangong/.virtualenvs/stock_v2510/bin/python)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12.11 WSL (Ubuntu-22.04): (/home/shangong/.pyenv/versions/3.12.11/bin/python)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="3.12 WSL (Ubuntu-22.04): (/home/shangong/.pyenv/versions/3.12.11/bin/python)" project-jdk-type="Python SDK" />
   <component name="PyCharmDSProjectLayout">
     <option name="id" value="JupyterRightHiddenStructureLayout" />
   </component>

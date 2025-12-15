@@ -56,7 +56,7 @@ response = client.chat.completions.create(
     model="qwen3-vl",
     temperature=0.15,  # 保持低温
     # 【核心修改】加入重复惩罚
-    frequency_penalty=1.1,  # 防止复读
+    frequency_penalty=1.5,  # 防止复读
     presence_penalty=0.1,  # 【改为0】不要惩罚话题重复，JSON需要重复Key
     stop=[
         "<|im_end|>",
