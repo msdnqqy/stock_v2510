@@ -10,5 +10,5 @@ for image_path in image_files:
 
 # 3. 循环你的 LLM 代码
 for img_path in image_files:
-    # 调用你之前的 encode_image 和 LLM 请求逻辑...
+    # 调用你之前的 encode_image 和 LLM 请求逻辑...\
     pass
