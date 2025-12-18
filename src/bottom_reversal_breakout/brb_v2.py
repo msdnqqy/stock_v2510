@@ -87,7 +87,7 @@ response = client.chat.completions.create(
         # "```json",  # 防止它输出完代码块后继续废话
         # "}"                # 【绝招】如果你只需要一个 JSON，可以在检测到右大括号时强制停止（需慎用，防止嵌套结构未闭合）
     ],
-    # response_format={"type": "json_object"},
+    response_format={"type": "json_object"},
     messages=[
         {
             "role": "system",

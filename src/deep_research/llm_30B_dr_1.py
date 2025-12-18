@@ -3,6 +3,7 @@ import time  # <--- 新增 1: 导入 time 模块
 from llama_cpp import Llama, GGML_TYPE_Q8_0
 from config import default_user_prompt_template,user_input_d,news_context_text
 import concurrent.futures
+import json
 
 # ================= 配置区域 =================
 # 你的配置保持不变
