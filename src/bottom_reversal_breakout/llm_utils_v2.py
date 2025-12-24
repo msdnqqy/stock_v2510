@@ -63,12 +63,44 @@ def analyze_image(image_path):
 
     输出要求:在输出中不要输出任何无关内容，务必确保编号连续，最后统计总数。
     <output>
-    <ref>K1</ref><box>[...]</box> [实心绿色 | 空心红色 ]
-    <ref>K2</ref><box>[...]</box> [实心绿色 | 空心红色 ]
+    <ref>K1</ref><box>[...]</box> <color>红色还是绿色</color> <solid>空心还是实心</solid><tag>柱子的标号</tag>
+    <ref>K2</ref><box>[...]</box> <color>红色还是绿色</color> <solid>空心还是实心</solid><tag>柱子的标号</tag>
+
     ... 
     </output>
     """
 
+    prompt2="""
+    Scanning the Image
+
+I've begun analyzing the stock chart image, image6.png. I'm focusing on accurately identifying and extracting candlestick data. My initial focus is on correctly isolating each candlestick from left to right. Once I've verified my approach, I'll move on to normalizing the coordinates. I'm aiming for a highly precise and reliable scan.
+
+Detailing Candlesticks
+
+I've been meticulously examining the image6.png chart, focusing on individual candlestick characteristics and their associated labels. I've categorized each candlestick by color (red or green), solidity (solid or hollow), and the presence of a red number label. My current analysis reveals twelve distinct candlesticks with corresponding labels ranging from 11 to 22, each precisely identified within the chart's structure.
+
+Defining Output Structure
+
+I'm now focusing on formatting the output data according to the established template: <ref>Kn</ref><box>[ymin, xmin, ymax, xmax]</box> <color>...</color> <solid>...</solid><tag>...</tag>. I've extracted all the necessary details, including candlestick color, solidity, and the associated tag. The coordinates, ranging from roughly 100x100 to 950x950, are being normalized to fit the 1000x1000 image dimensions. My priority now is ensuring the output format is precise and compliant with the given structure.
+
+Confirming Final Candlestick Count
+
+I've revised the candlestick data to reflect image-relative coordinates. After processing, I'm verifying the final tally, ensuring a total of twelve candlesticks are represented in the output data. Now, I'm focusing on ensuring data integrity prior to final output.
+
+Finalizing the Data
+
+I'm now checking the solidity of the candlesticks, confirming they're all solid as observed. I've double-checked all coordinates and tag assignments, from K1 to K12. I'm satisfied that everything is correct. The final output is ready to be produced!
+    """
+    prompt3 = """
+当你把图片和这段 Prompt 发给我时，我的处理流程如下：
+
+视觉锚定： 在坐标系中识别出所有符合“柱状+细线”特征的物体。
+
+逻辑对齐： 寻找这些物体下方的红色数字，并将其与视觉特征进行 1:1 绑定。
+
+顺序校验： 按照 X 坐标的值对识别出的物体进行降序排列。
+
+翻译输出： 将每一个物体的视觉包围框（Bounding Box）转换成归一化后的数字序列。"""
     result = ''
     # 记录开始处理的时间
     start_process_time = time.time()
@@ -76,7 +108,7 @@ def analyze_image(image_path):
         max_tokens=16192,  # 视觉任务通常需要多一点 token 输出
         stream=True,
         model="qwen3-vl",
-        temperature=0.1,  # 保持低温
+        temperature=0.0,  # 保持低温
         # 【核心修改】加入重复惩罚
         frequency_penalty=1.5,  # 防止复读
         presence_penalty=0.1,  # 【改为0】不要惩罚话题重复，JSON需要重复Key
@@ -107,7 +139,7 @@ def analyze_image(image_path):
                     },
                     {
                         "type": "text",
-                        "text": prompt
+                        "text": prompt + prompt3
                     }
                 ]
             }
@@ -171,7 +203,7 @@ def analyze_image(image_path):
 
 
 if __name__ == "__main__":
-    image_path = "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_2/image4.png"
+    image_path = "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_2/image6.png"
     result = analyze_image(image_path)
 
     # image_path = "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_000360.jpg"
