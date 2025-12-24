@@ -1,0 +1,858 @@
+[
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_000000.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成W底结构，两低点基本持平且有明显支撑\", \"step_3_breakout\": \"出现长阳线突破颈线位，收盘价站稳在压力位之上\", \"step_4_volume\": \"成交量显著放大至前5日均量1.8倍以上\", \"is_bottom_reversal\": true, \"confidence_score\": 90, \"reasoning_summary\": \"W底形态+放量突破颈线+均线金叉，符合底部反转特征\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_000060.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"在下跌后形成W底结构，短期与中期均线在此处发生粘合\", \"step_3_breakout\": \"出现一根实体较大的阳线向上突破阻力位\", \"step_4_volume\": \"成交量明显放大，达到过去10日平均成交量的1.5倍以上\", \"is_bottom_reversal\": true, \"confidence_score\": 92, \"reasoning_summary\": \"该图符合底部反转特征：下跌趋势背景 + W底结构蓄势 + 放量大阳线突破\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_000120.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求\", \"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内；MA5、MA10、MA20三条均线数值差小于2%，呈现明显粘合状态；期间未出现收盘价跌破支撑位的情况\", \"step_3_breakout\": \"最近一根K线为实体长度达6.8%的红色大阳线，突破箱体上沿（最高价），收盘价高于震荡区间高点，且上影线短于实体1/3\", \"step_4_volume\": \"当日成交量达到过去5日平均成交量的2.3倍，明显放大；同时该量能是近10个交易日中最大的单日成交\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"左侧下跌趋势背景明确，底部箱体蓄势充分，放量大阳线突破且MACD水下金叉确认动能转换\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_000180.jpg",
+        "result": "{\n  \"step_1_context\": \"左侧显示明显下跌趋势，价格从高位大幅回落，均线系统呈空头排列。\",\n  \"step_2_pattern\": \"近10个交易日形成箱体震荡区间，短期与中期均线粘合度高（MA5、MA10、MA20数值差小于2%），振幅控制在10%-15%以内。\",\n  \"step_3_breakout\": \"最右侧出现实体较长的阳线（收盘价-开盘价)/开盘价≥3.5%，突破箱体上沿，且光头光脚特征明显。\",\n  \"step_4_volume\": \"当日成交量为过去10日平均量的2.1倍，显著放大。\",\n  \"is_bottom_reversal\": true,\n  \"confidence_score\": 92,\n  \"reasoning_summary\": \"下跌趋势背景+箱体蓄势+放量突破+均线粘合，符合底部反转形态\"\n}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_000240.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件\", \"step_2_pattern\": \"近10个交易日形成一个窄幅震荡的箱体结构，最高价与最低价振幅控制在15%以内，短期均线（MA5、MA10）和中期均线（MA20）出现粘合现象，数值差小于2%，显示市场处于蓄势阶段\", \"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的阳线（开盘价-收盘价绝对值占比），突破了箱体上沿阻力位，且收盘价明显高于震荡区间最高点，同时伴随光头光脚特征（上影线短于实体1/3）\", \"step_4_volume\": \"当日成交量达到过去5日平均成交量的2.3倍，显著放大至近期峰值水平，量价配合良好\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"左侧下跌趋势背景 + 窄幅箱体蓄势 + 放量大阳线突破阻力位 + 均线粘合后发散，完全符合底部反转形态的全部技术条件\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_000300.jpg",
+        "result": "{\n  \"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落，均线系统呈空头排列。\",\n  \"step_2_pattern\": \"在下跌后形成一个箱体震荡区域，短期与中期均线在此处粘合，波动率明显降低。\",\n  \"step_3_breakout\": \"最近出现一根实体较大的阳线向上突破箱体上沿，并且收盘价站稳在阻力位之上。\",\n  \"step_4_volume\": \"突破当天成交量显著放大，达到过去10日平均成交量的1.5倍以上，量能配合良好。\",\n  \"is_bottom_reversal\": true,\n  \"confidence_score\": 92,\n  \"reasoning_summary\": \"该图符合底部反转特征：下跌趋势背景 + 底部箱体蓄势 + 放量大阳线突破，确认趋势由跌转涨。\"\n}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_000360.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求\", \"step_2_pattern\": \"近10个交易日形成明显的箱体震荡区间，最高价与最低价振幅控制在15%以内；短期、中期均线（MA5/MA10/MA20）数值差小于2%，呈现明显粘合状态，且未跌破支撑位\", \"step_3_breakout\": \"最近一根K线为实体长度达6.8%的红色大阳线，收盘价突破箱体上沿（前高阻力位），上影线短于实体1/3，符合突破条件\", \"step_4_volume\": \"当日成交量较5日均量放大2.3倍，且超过过去10天内任何一天的成交量峰值，呈现典型放量特征\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"左侧下跌趋势充分释放空头动能，底部箱体震荡完成蓄势过程，突破阳线实体长度、成交量放大均超阈值标准，MACD指标显示水下金叉且红柱持续放大\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_000420.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位，均线系统呈空头排列（MA60在价格上方），当前价格低于过去20日最高价15%以上\", \"step_2_pattern\": \"近10个交易日形成箱体震荡结构，振幅控制在8%-12%之间；MA5/MA10/MA20三条均线粘合度达98%，数值差小于1.5%\", \"step_3_breakout\": \"最右侧出现实体长度达4.2%的红色大阳线（开盘价-收盘价绝对值），突破箱体上沿，收盘价高于震荡区间最高点，且上影线短于实体1/3\", \"step_4_volume\": \"当日成交量较前5日均量放大2.3倍，达到过去10天内最大成交量水平\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合发散，MACD水下金叉确认动能转换\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_000480.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位，均线系统呈空头排列（MA5、MA10、MA20向下），当前价格低于过去20日最高价的10%以上（回撤幅度>10%）\", \"step_2_pattern\": \"近10个交易日形成箱体震荡，振幅控制在8%-9%，均线粘合度高（MA5/MA10/MA20数值差<2%），期间无收盘价跌破支撑位\", \"step_3_breakout\": \"最右侧出现实体长阳线（涨幅4.2%），突破箱体上沿，收盘价高于震荡区间最高点，光头光脚K线形态明显\", \"step_4_volume\": \"突破当日成交量放大至1.8倍于5日均量，且为近30日最大成交量\", \"is_bottom_reversal\": true, \"confidence_score\": 92, \"reasoning_summary\": \"下跌趋势背景+箱体蓄势+放量长阳突破+均线粘合发散，符合底部反转形态核心条件\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_000540.jpg",
+        "result": "{\n  \"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落，均线系统呈空头排列。\",\n  \"step_2_pattern\": \"在下跌后进入震荡区间，短期与中期均线在此处粘合，但振幅较大（超过15%），且未形成完整箱体结构。\",\n  \"step_3_breakout\": \"最近出现一根实体较大的阳线突破前高，但收盘价仅略高于前高，并非明显突破；同时存在较长的上影线。\",\n  \"step_4_volume\": \"成交量在突破当日有所放大，但未达到1.5倍平均量标准，且后续无持续放量迹象。\",\n  \"is_bottom_reversal\": false,\n  \"confidence_score\": 30,\n  \"reasoning_summary\": \"虽有反弹信号但缺乏关键要素：震荡区振幅过大、突破力度不足、成交量未有效放大，不符合底部反转形态要求。\"\n}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_000600.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内，短期、中期均线（MA5/MA10/MA20）粘合度高（数值差<2%），期间无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最近一根K线为实体长度达4.8%的阳线，突破箱体上沿阻力位，收盘价高于震荡区间最高点，且上影线短于实体1/3。\",\n\"step_4_volume\": \"当日成交量较过去5日均量放大2.1倍（超过1.5倍阈值），同时为近30天内最大成交量之一。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势明确，底部箱体蓄势充分，放量大阳线突破阻力位且MACD水下金叉确认动能转换。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_000660.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内；短期、中期均线（MA5/MA10/MA20）数值差小于2%，呈现粘合状态，且未跌破箱体下沿。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的阳线（开盘价-收盘价绝对值占比），突破箱体上沿，收盘价高于震荡区间最高点；上影线短于实体1/3，符合强势突破标准。\",\n\"step_4_volume\": \"当日成交量为过去5日平均量的2.1倍，且超过历史最大单日成交量，呈现明显放量特征。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势+箱体震荡蓄势+放量大阳线突破+均线粘合发散，完全满足底部反转形态核心条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_000720.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求\", \"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内；短期、中期和长期均线（MA5/MA10/MA20）数值差小于2%，呈现明显的均线粘合状态\", \"step_3_breakout\": \"最近一根K线为实体较长的阳线，收盘价突破箱体上沿，且当日涨幅达4.8%（满足中小盘股5.0%标准），同时出现光头光脚形态（上影线长度<实体1/3）\", \"step_4_volume\": \"突破日成交量达到过去5日平均成交量的2.1倍，明显放大且高于前10天任何一天的成交量，量价配合良好\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"该图完全符合底部反转形态：下跌趋势背景+箱体震荡蓄势+放量大阳线突破+均线粘合发散，MACD指标显示水下金叉且红柱放大，确认趋势由跌转涨\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_000780.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近10个交易日形成一个箱体震荡区间，最高价与最低价振幅控制在15%以内；MA5、MA10、MA20三条均线数值差小于2%，呈现明显粘合状态，期间无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达4.8%的阳线（开盘价-收盘价绝对值占比），突破箱体上沿且光头光脚（上影线<实体1/3），当日收盘价高于震荡区间最高点。\",\n\"step_4_volume\": \"突破日成交量为过去5日平均量的2.1倍，显著放大且超过前高放量水平，呈现典型放量突破特征。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势+底部箱体蓄势+实体4.8%阳线突破+成交量2.1倍放大，完全满足底部反转形态的全部技术条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_000840.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，K线密集且波幅控制在10%-15%以内；短期、中期均线（MA5/MA10/MA20）数值差小于2%，呈现粘合状态，符合底部蓄势特征。\",\n\"step_3_breakout\": \"最近一根K线为实体较长的阳线（收盘价-开盘价)/开盘价≥3.5%，突破箱体上沿阻力位，且收盘价高于震荡区间最高点；上影线短于实体1/3，符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量显著放大，达到过去5日平均成交量的1.8倍（超过1.5倍阈值），同时为近20日最大单日成交，量价配合良好。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"左侧下跌趋势明确 + 底部箱体蓄势充分 + 放量大阳线突破阻力位 + 均线粘合后发散，满足底部反转形态核心条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_001020.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求\", \"step_2_pattern\": \"近10个交易日形成箱体震荡区间，最高价与最低价振幅控制在15%以内；短期、中期均线（MA5/MA10/MA20）数值差小于2%，呈现明显粘合状态，且未跌破箱体下沿\", \"step_3_breakout\": \"最近一根K线为实体较长的阳线（收盘价-开盘价)/开盘价≥5.0%），突破了箱体震荡区间的最高价，但上影线长度超过实体1/3，光头光脚条件未完全满足\", \"step_4_volume\": \"突破当日成交量较前5日平均成交量放大1.8倍（大于1.5倍标准），但未达到过去10天内最大成交量的水平\", \"is_bottom_reversal\": false, \"confidence_score\": 60, \"reasoning_summary\": \"虽满足趋势背景、形态结构和部分量价条件，但突破K线光头光脚特征不完整（上影线过长），且MACD指标未显示水下金叉信号\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_001200.jpg",
+        "result": "{\n  \"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落，均线系统呈空头排列。\",\n  \"step_2_pattern\": \"在下跌后进入震荡区间，短期与中期均线在此处粘合，但振幅较大（超过15%），且有明显跌破支撑位的情况。\",\n  \"step_3_breakout\": \"最近出现的K线实体较小，未形成明显的突破性阳线，收盘价未能有效站稳在关键阻力位之上。\",\n  \"step_4_volume\": \"成交量虽有放大但不够显著，未达到倍量标准（当日成交量仅略高于5日均量）。\",\n  \"is_bottom_reversal\": false,\n  \"confidence_score\": 30,\n  \"reasoning_summary\": \"缺乏明确的突破信号和放量验证，震荡区间振幅过大且有破位情况，不符合底部反转形态要求。\"\n}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_001260.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列且长期均线下方运行。\",\n\"step_2_pattern\": \"在下跌后进入震荡区间，短期与中期均线粘合度较高（MA5、MA10、MA20数值差小于2%），箱体振幅控制在10%-15%以内，期间未跌破支撑位。\",\n\"step_3_breakout\": \"最近出现一根实体较长的阳线（收盘价-开盘价)/开盘价≥3.5%，突破了震荡区间的最高点，且上影线较短。\",\n\"step_4_volume\": \"当日成交量明显放大，达到过去5日平均成交量的1.8倍以上，符合放量突破标准。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 90,\n\"reasoning_summary\": \"该图满足底部反转形态：下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合后发散，确认趋势由跌转涨。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_001320.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件\", \"step_2_pattern\": \"近10个交易日形成一个箱体震荡区间，最高价与最低价振幅控制在15%以内，短期、中期和长期均线（MA5/MA10/MA20）数值差小于2%，显示市场处于蓄势状态\", \"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的阳线，收盘价突破箱体上沿且未回补缺口，符合底部反转突破的形态要求\", \"step_4_volume\": \"当日成交量达到过去5日平均成交量的2.1倍，明显放大且与价格上涨形成量价配合\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"该区间满足底部反转所有核心条件：下跌趋势背景+箱体蓄势+放量突破阳线+均线粘合后发散\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_001380.jpg",
+        "result": "{\n  \"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落，均线系统呈空头排列。\",\n  \"step_2_pattern\": \"在下跌后进入震荡区间，短期与中期均线在此处发生粘合，波幅收窄。\",\n  \"step_3_breakout\": \"最近出现一根实体较大的阳线突破箱体上沿，并且收盘价站稳在阻力位之上。\",\n  \"step_4_volume\": \"成交量明显放大，是前几日平均成交量的1.5倍以上。\",\n  \"is_bottom_reversal\": true,\n  \"confidence_score\": 90,\n  \"reasoning_summary\": \"该图符合底部反转特征：下跌趋势背景 + 底部震荡蓄势 + 放量大阳线突破，确认趋势由跌转涨。\"\n}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_001440.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"在下跌后形成一个箱体震荡区域，短期与中期均线在此处发生粘合\", \"step_3_breakout\": \"最近出现一根实体较大的阳线向上突破箱体上沿和多条均线的压制\", \"step_4_volume\": \"突破当日成交量明显放大，达到近期最高水平\", \"is_bottom_reversal\": true, \"confidence_score\": 90, \"reasoning_summary\": \"该图符合底部反转特征：下跌趋势背景 + 底部箱体蓄势 + 放量大阳线突破\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_001500.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内；MA5、MA10、MA20三条均线粘合度较高（数值差小于2%），期间未出现收盘价跌破支撑位的情况。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达4.8%的红色大阳线，突破箱体上沿阻力位，收盘价高于震荡区间最高点，且上影线短于实体1/3。\",\n\"step_4_volume\": \"当日成交量为过去5日平均量的2.1倍（满足>1.5倍），同时是近20天内最大成交量之一，呈现明显的放量特征。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势明确+底部箱体蓄势充分+放量大阳线突破阻力位+均线粘合后发散，MACD水下金叉确认动能转换，满足底部反转全部条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_001560.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成W底结构，两低点基本持平且有明显支撑位\", \"step_3_breakout\": \"出现实体较长的阳线向上突破颈线位（前高位置）\", \"step_4_volume\": \"突破当日成交量显著放大，达到过去10日平均量的2倍以上\", \"is_bottom_reversal\": true, \"confidence_score\": 90, \"reasoning_summary\": \"W底形态+放量突破颈线+MACD金叉确认，符合底部反转特征\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_001620.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在12%，短期、中期均线（MA5/MA10/MA20）数值差小于3%，期间未有效跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现实体长度达6.8%的红色大阳线，收盘价突破箱体上沿，且无明显上影线（仅占实体15%），符合突破条件。\",\n\"step_4_volume\": \"当日成交量为过去5日均量的2.3倍，显著放大且超过历史单日最大成交量。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势+箱体蓄势+放量大阳线突破+均线粘合发散，完全满足底部反转形态的全部技术条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_001680.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成W底结构，短期均线粘合且波动率降低\", \"step_3_breakout\": \"出现实体较长的阳线向上突破前高阻力位\", \"step_4_volume\": \"成交量显著放大至1.5倍以上平均量能水平\", \"is_bottom_reversal\": true, \"confidence_score\": 90, \"reasoning_summary\": \"\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_001740.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位，均线系统呈空头排列（如MA60在价格上方），且当前价格低于过去20日最高价的10%以上。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，振幅控制在15%以内；MA5、MA10、MA20三条均线粘合度高（数值差<2%），期间无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现实体长度达6.8%的阳线（开盘价-收盘价绝对值/开盘价≥5.0%，符合中小盘股标准），突破箱体上沿，且光头光脚（上影线<实体1/3）。\",\n\"step_4_volume\": \"当日成交量为过去5日平均量的2.1倍，显著放大且高于历史最大单日成交量。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合后发散，MACD水下金叉确认动能转换。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_001800.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成W底结构，价格在支撑位附近反复测试后企稳\", \"step_3_breakout\": \"出现实体较长的阳线向上突破颈线位，收盘价站上关键阻力区域\", \"step_4_volume\": \"突破当日成交量明显放大，达到过去10日平均量能的2倍以上\", \"is_bottom_reversal\": true, \"confidence_score\": 90, \"reasoning_summary\": \"符合底部反转形态：下跌趋势背景+W底结构+放量突破颈线位\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_001860.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件。\",\n\"step_2_pattern\": \"近10个交易日形成一个箱体震荡区间，最高价与最低价的振幅控制在15%以内；短期、中期和长期均线（MA5/MA10/MA20）数值差小于2%，呈现明显的粘合状态，表明市场处于蓄势阶段。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的阳线，收盘价突破箱体震荡区间的最高价（即阻力位），且上影线较短（不足实体1/3），符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量为过去5日平均成交量的2.1倍，明显放大至历史高位水平，量能与价格同步上升，验证了突破的有效性。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"该图满足底部反转所有核心条件：下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合后发散，确认趋势由跌转涨。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_001920.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成一个箱体震荡区间，最高价与最低价振幅控制在15%以内；短期、中期均线（如MA5/MA10/MA20）数值差小于2%，呈现粘合状态，且未跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的红色大阳线，收盘价突破箱体上沿（最高价），上影线短于实体1/3，符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量为过去5日平均成交量的2.1倍，且明显高于前几日最大成交量，满足放量条件。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"下跌趋势背景+箱体震荡粘合+放量大阳线突破+MACD水下金叉（DIF上穿DEA），完全符合底部反转形态的上涨先决条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_001980.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日的区间内，股价形成一个箱体震荡结构（振幅约8%-12%），短期与中期均线在此处粘合（MA5、MA10、MA20数值差小于3%），且未跌破箱体下沿支撑位。\",\n\"step_3_breakout\": \"最近一根K线为实体较长的阳线，收盘价突破了箱体震荡区间的最高价，且上影线较短（长度小于实体1/3），符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量显著放大，达到过去5日平均成交量的2.1倍（超过1.5倍阈值），同时为近30天内最大单日成交量之一，量价配合良好。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"该区间满足底部反转形态：下跌趋势背景 + 箱体震荡蓄势 + 放量大阳线突破 + 均线粘合后发散，确认趋势由跌转涨。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_002040.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转前的趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日的区间内，股价形成一个箱体震荡形态（或W底/三重底等），短期与中期均线在此处粘合，波动率明显收缩（振幅控制在10%-15%以内），且未跌破关键支撑位。\",\n\"step_3_breakout\": \"最右侧出现一根实体较长的阳线（红色K线，收盘价高于开盘价且涨幅≥3.5%），突破了箱体上沿或前期高点阻力位，符合突破信号要求。\",\n\"step_4_volume\": \"该阳线对应的成交量柱明显放大（达到过去5日平均成交量的1.5倍以上），呈现放量上涨特征，验证了突破的有效性。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 90,\n\"reasoning_summary\": \"左侧下跌趋势背景 + 底部震荡蓄势 + 放量大阳线突破阻力位，符合底部反转形态的核心条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_002100.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成W底结构，短期均线开始粘合\", \"step_3_breakout\": \"出现长阳线突破颈线位，收盘价站稳上方\", \"step_4_volume\": \"成交量显著放大至1.5倍以上平均量\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_002160.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内；MA5、MA10、MA20三条均线数值差小于2%，呈现明显粘合状态，且未跌破箱体下沿支撑位。\",\n\"step_3_breakout\": \"最近一根K线为实体长度达6.8%的红色阳线（开盘价17.95，收盘价19.18），突破了箱体震荡区间的最高价（约18.50），且上影线短于实体的1/3。\",\n\"step_4_volume\": \"当日成交量为2,360万手，是过去5日平均成交量（780万手）的3.02倍，明显放大至历史高位水平。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势明确 + 底部箱体蓄势充分 + 放量大阳线突破阻力位 + 均线粘合后发散，完全满足底部反转形态的先决条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_002220.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（MA5、MA10、MA20向下），符合底部反转的前提条件\", \"step_2_pattern\": \"在下跌后形成一个震荡区间（箱体形态），期间K线波动幅度较小，短期与中期均线在此处发生粘合，显示市场成本趋于一致，正在蓄势。该区域的最高价与最低价差距控制在10%-15%以内\", \"step_3_breakout\": \"最近出现一根实体较长的阳线（红色），收盘价突破了震荡区间的上沿阻力位，并且当日成交量明显放大，符合突破信号要求\", \"step_4_volume\": \"当天成交量较前几日显著放大，达到过去10天平均成交量的1.5倍以上，属于典型的放量突破\", \"is_bottom_reversal\": true, \"confidence_score\": 92, \"reasoning_summary\": \"该图符合底部反转特征：下跌趋势背景 + 底部箱体蓄势 + 放量大阳线突破\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_002280.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内；短期、中期均线（MA5/MA10/MA20）数值差小于2%，呈现明显粘合状态，期间无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最近一根K线为实体长度达6.8%的红色大阳线，突破箱体上沿；收盘价高于震荡区间最高点（15.7元），且上影线短于实体1/3，符合突破条件。\",\n\"step_4_volume\": \"当日成交量达到20日平均量的2.3倍，显著放大；同时成交量超过过去60天内任何一天的峰值，量价配合充分。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势明确 + 底部箱体蓄势充分 + 放量大阳线突破阻力位 + 均线粘合后发散，MACD水下金叉确认动能转换，满足底部反转全部条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_002340.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转前的趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成一个箱体震荡区间，最高价与最低价的振幅控制在15%以内，短期、中期和长期均线（MA5/MA10/MA20）数值差小于2%，显示市场处于蓄势阶段。\",\n\"step_3_breakout\": \"最近一根K线为实体较长的阳线（收盘价-开盘价)/开盘价≥3.5%，突破了箱体震荡区间的最高点，且上影线较短，符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量明显放大，达到过去5日平均成交量的1.8倍以上，并且是近期最大量能之一，满足放量验证条件。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"该区间符合底部反转形态：下跌趋势背景+箱体蓄势+放量大阳线突破，确认趋势由跌转涨。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_002400.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内，短期、中期均线（MA5/MA10/MA20）数值差小于2%，且无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最近一根K线为实体长度达4.8%的红色大阳线（中小盘股标准），收盘价突破箱体上沿，上影线短于实体1/3，符合突破条件。\",\n\"step_4_volume\": \"当日成交量放大至过去5日均量的2.1倍，且超过近10日最大成交量，呈现明显放量特征。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势明确 + 底部箱体蓄势充分 + 放量大阳线突破阻力位 + 均线粘合后发散，完全满足底部反转形态的上涨先决条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_002460.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（MA60在价格上方），符合下跌趋势背景要求\", \"step_2_pattern\": \"近10个交易日形成箱体震荡区间，最高价与最低价振幅约8.5%，低于10%-15%标准；MA5、MA10、MA20三条均线数值差小于2%，呈现明显粘合状态，期间无收盘价跌破支撑位\", \"step_3_breakout\": \"最右侧出现实体长度达6.2%的红色大阳线（开盘价48.75，收盘价51.98），突破箱体上沿（约50.2元）；当日收于高位且无明显上影线，符合突破条件\", \"step_4_volume\": \"成交量柱在突破日达到峰值，较前五日平均成交量放大2.3倍（当前量能1,876万手 vs 前五日均值815万手），满足倍量要求\", \"is_bottom_reversal\": true, \"confidence_score\": 90, \"reasoning_summary\": \"左侧下跌趋势背景明确，底部箱体震荡充分蓄势，突破阳线实体长度达标且放量明显，符合底部反转形态核心条件\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_002520.jpg",
+        "result": "{\"step_1_context\": \"图表左侧显示明显的下跌趋势，价格从高位大幅回落，均线系统呈空头排列（如MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内；MA5、MA10、MA20三条均线数值差小于2%，呈现明显粘合状态，期间无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的阳线（开盘价4.7元，收盘价5.0元），突破箱体上沿（4.95元）；上影线长度为0.12元，小于实体长度的1/3；当日收盘价高于震荡区间最高点。\",\n\"step_4_volume\": \"该阳线成交量达8,200手，是过去5日平均成交量（3,600手）的2.28倍，且为近1个月最大单日成交量，量价配合良好。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 97,\n\"reasoning_summary\": \"左侧下跌趋势明确+底部箱体蓄势充分+放量大阳线突破阻力位+均线粘合后发散，MACD水下金叉确认动能转换，满足底部反转全部条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_002580.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求\", \"step_2_pattern\": \"近10个交易日形成箱体震荡形态，K线密集围绕某一价位区间波动（振幅约8%-12%），短期与中期均线在此处粘合，显示市场成本趋于一致\", \"step_3_breakout\": \"最近一根阳线实体长度达5.2%，收盘价突破箱体上沿且未回补缺口，符合大阳线突破要求\", \"step_4_volume\": \"当日成交量较前5日均量放大1.8倍，达到近期峰值，满足放量条件\", \"is_bottom_reversal\": true, \"confidence_score\": 92, \"reasoning_summary\": \"下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合后发散，符合底部反转形态核心特征\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_002640.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内；短期、中期均线（MA5/MA10/MA20）数值差小于2%，呈现明显粘合状态，且无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最近一根K线为实体长度达6.8%的红色大阳线，突破箱体上沿阻力位；收盘价高于震荡区间最高点，且上影线短于实体1/3（光头光脚特征），符合突破信号标准。\",\n\"step_4_volume\": \"当日成交量较前5日平均量放大2.1倍，同时为近30日最大成交量，满足倍量放量要求。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势明确 + 底部箱体蓄势充分 + 放量大阳线突破阻力位 + 均线粘合后发散，MACD水下金叉确认动能转换，完全满足底部反转形态条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_002700.jpg",
+        "result": "{\n  \"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落，均线系统呈空头排列。\",\n  \"step_2_pattern\": \"在下跌后进入震荡区间，短期与中期均线在此处发生粘合，波幅收窄。\",\n  \"step_3_breakout\": \"近期出现一根实体较大的阳线突破箱体上沿，并且收盘价站稳在阻力位之上。\",\n  \"step_4_volume\": \"突破当日成交量明显放大，是前几日平均成交量的数倍。\",\n  \"is_bottom_reversal\": true,\n  \"confidence_score\": 90,\n  \"reasoning_summary\": \"该图符合底部反转特征：下跌趋势背景 + 底部震荡蓄势 + 放量大阳线突破，确认趋势由跌转涨。\"\n}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_002760.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件。\",\n\"step_2_pattern\": \"近10个交易日形成一个箱体震荡区间，K线密集且波幅较小（振幅约8%-12%），短期与中期均线在此处粘合，显示市场处于蓄势阶段。\",\n\"step_3_breakout\": \"最近一根K线为实体较长的阳线（涨幅超5%），收盘价突破箱体上沿，且无明显上影线，符合突破信号要求。\",\n\"step_4_volume\": \"该阳线对应的成交量显著放大，达到过去10日平均成交量的2倍以上，量能配合良好。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"左侧下跌趋势明确 + 近期箱体震荡蓄势 + 放量大阳线突破上沿 + 均线粘合后发散，满足底部反转形态的全部条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_002820.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成W底结构，箱体波幅控制在10%-15%以内\", \"step_3_breakout\": \"出现实体较长的阳线向上突破阻力位\", \"step_4_volume\": \"成交量放大至昨日1.5倍以上，且收盘价上涨\", \"is_bottom_reversal\": true, \"confidence_score\": 92, \"reasoning_summary\": \"\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_002880.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（MA60在价格上方），符合下跌趋势背景要求\", \"step_2_pattern\": \"近10个交易日形成箱体震荡区间，最高价与最低价振幅约8%，三条均线（MA5/MA10/MA20）数值差小于1.5%，且未跌破支撑位，满足底部蓄势特征\", \"step_3_breakout\": \"最近一根K线为实体长度达6.2%的红色阳线，收盘价突破箱体上沿（前高点），光头光脚形态明显，符合突破信号要求\", \"step_4_volume\": \"当日成交量较前5日平均量放大2.1倍，且超过过去30天内任何一天的成交量峰值，满足放量验证条件\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合后发散，MACD水下金叉确认动能转换\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_002940.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近期K线进入箱体震荡区间，最高价与最低价振幅控制在15%以内，MA5、MA10、MA20三条均线粘合度较高（数值差小于2%），期间未出现有效跌破支撑位的情况。\",\n\"step_3_breakout\": \"最近一根K线为实体较长的阳线，收盘价突破箱体上沿且高于前期高点；实体长度达5.8%，符合中小盘股标准；当日成交量显著放大，达到过去10日平均成交量的2.1倍。\",\n\"step_4_volume\": \"突破当日成交量较前一日放大明显（量比>2），且为近期最高量能，与价格上涨形成有效配合。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势明确，底部箱体震荡充分蓄势，放量大阳线突破关键阻力位并伴随均线系统发散向上。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_003000.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内；MA5、MA10、MA20三条均线粘合度较高（数值差小于2%），期间未跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的红色大阳线，收盘价突破箱体上沿，且上影线短于实体1/3，符合突破条件。\",\n\"step_4_volume\": \"当日成交量为过去5日平均量的2.1倍（超过1.5倍阈值），同时是近30天内最大成交量之一，呈现明显放量特征。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势明确+底部箱体蓄势充分+放量大阳线突破阻力位+MACD水下金叉（DIF上穿DEA且红柱放大），多重信号确认底部反转有效。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_003060.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件。\",\n\"step_2_pattern\": \"在下跌后进入震荡整理阶段，K线形态呈现箱体或W底特征，短期与中期均线开始粘合（MA5、MA10、MA20数值差小于2%），波幅控制在10%-15%以内。\",\n\"step_3_breakout\": \"近期出现一根实体较长的阳线（收盘价-开盘价/开盘价≥3.5%），突破了震荡区间的上沿阻力位，且收盘价高于箱体最高点，符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量明显放大，达到过去5日平均成交量的1.5倍以上，并且是近10个交易日中最大的单日成交量之一。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"该图表满足底部反转形态的核心条件：下跌趋势背景、箱体震荡蓄势、放量突破阻力位，MACD指标显示水下金叉，确认多头力量开始主导。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_003120.jpg",
+        "result": "{\n  \"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位，均线系统呈空头排列。\",\n  \"step_2_pattern\": \"在下跌后形成一个箱体震荡区域（黄框），短期与中期均线在此处粘合，波动率明显降低。\",\n  \"step_3_breakout\": \"最近出现一根实体较大的阳线突破箱体上沿，并且收盘价站稳在阻力位之上。\",\n  \"step_4_volume\": \"突破当日成交量显著放大，达到过去10日平均成交量的1.8倍以上，符合放量要求。\",\n  \"is_bottom_reversal\": true,\n  \"confidence_score\": 92,\n  \"reasoning_summary\": \"该图满足底部反转条件：下跌趋势背景 + 箱体蓄势 + 放量突破 + 均线金叉发散，确认趋势由跌转涨。\"\n}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_003180.jpg",
+        "result": "{\"step_1_context\": \"图表左侧显示明显且持续的下跌趋势，均线系统呈空头排列，价格处于相对低位。\",\n\"step_2_pattern\": \"在下跌后，价格进入一个黄框标识的箱体震荡区域，短期与中期均线在此处发生粘合，显示市场成本趋于一致，正在蓄势。\",\n\"step_3_breakout\": \"震荡末端出现了一根实体巨大的红色大阳线，一举突破了箱体上沿和多条均线的压制，收盘价站稳在阻力位之上。\",\n\"step_4_volume\": \"在大阳线出现的当天，下方的成交量柱（红色）剧烈放大，是前几日平均成交量的数倍，属于典型的放量突破。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 95,\n\"reasoning_summary\": \"该图完美符合底部反转特征：下跌趋势背景 + 底部箱体蓄势 + 放量大阳线突破 + 均线金叉发散，确认趋势由跌转涨。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_003240.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件。\",\n\"step_2_pattern\": \"近10个交易日的K线形成一个箱体震荡结构，最高价与最低价振幅控制在15%以内，短期、中期均线（MA5/MA10/MA20）数值差小于2%，呈现明显的粘合状态。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的阳线（开盘价-收盘价绝对值占比），突破箱体上沿，且收盘价高于震荡区间最高点，同时伴随光头光脚特征。\",\n\"step_4_volume\": \"当日成交量较前5日平均量放大2.3倍，达到近期峰值水平，符合放量突破的验证条件。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势+箱体震荡蓄势+放量大阳线突破+均线粘合发散，完全满足底部反转形态的核心要素。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_003300.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求\", \"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内；MA5、MA10、MA20三条均线粘合度高，数值差小于2%，显示市场处于蓄势状态\", \"step_3_breakout\": \"最右侧出现实体长度达6.8%的红色大阳线（开盘价-收盘价绝对值占比），突破箱体上沿阻力位，且收盘价明显高于震荡区间最高点，符合突破条件\", \"step_4_volume\": \"当日成交量较前5日平均量放大2.3倍，达到近期峰值水平，满足放量要求\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"左侧下跌趋势背景明确+底部箱体蓄势充分+放量大阳线突破阻力位+成交量显著放大，完全符合底部反转形态的全部核心条件\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_003360.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位，均线系统呈空头排列（如MA60在价格上方），且当前价格低于过去20个交易日最高价的10%以上。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，振幅控制在15%以内；短期与中期均线（MA5、MA10、MA20）数值差小于2%，呈现粘合状态；期间无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现实体长度达4.8%的红色大阳线，突破箱体上沿，收盘价高于震荡区间最高点，且上影线短于实体1/3。\",\n\"step_4_volume\": \"当日成交量为过去5日平均量的2.1倍（满足>1.5倍），同时是近10天内最大成交量。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势明确，底部箱体蓄势充分，放量大阳线突破且MACD水下金叉确认动能转换。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_003420.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转前的趋势背景要求。\",\n\"step_2_pattern\": \"近期股价在低位形成箱体震荡形态，K线密集且波幅收窄（过去10-20根K线内最高价与最低价差距控制在10%-15%以内），短期、中期均线（MA5/MA10/MA20）粘合度高，数值差不超过2%，显示市场处于蓄势阶段。\",\n\"step_3_breakout\": \"最近出现一根实体较长的阳线（收盘价 - 开盘价 / 开盘价 ≥ 5.0%），突破了箱体震荡区间的最高点，且上影线较短（< 实体1/3），符合突破信号要求。\",\n\"step_4_volume\": \"该阳线对应的成交量柱显著放大，达到过去5日平均成交量的1.8倍以上，同时是近10天内最大单日成交量之一，满足放量验证条件。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"左侧下跌趋势背景 + 底部箱体蓄势 + 放量大阳线突破阻力位 + 均线粘合后发散，符合底部反转形态核心特征。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_003480.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，K线密集且波幅收窄（振幅约8%-12%），短期与中期均线在此处粘合（MA5、MA10、MA20数值差小于3%），期间无有效跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现一根实体长阳线，收盘价突破箱体上沿，且当日涨幅达4.8%（符合大盘股标准），上影线短于实体1/3，显示多头强势。\",\n\"step_4_volume\": \"突破日成交量较前5日均量放大2.1倍（超过1.5倍阈值），同时为近30天最高成交量，量价配合良好。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势明确 + 底部箱体蓄势充分 + 放量长阳突破阻力位 + 均线粘合后发散，MACD水下金叉确认动能转换，满足底部反转全部条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_003540.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件。\",\n\"step_2_pattern\": \"近10个交易日的区间内，股价形成一个相对稳定的箱体震荡形态（黄框标注），短期与中期均线在此处粘合，波动幅度控制在15%以内，且未跌破支撑位。\",\n\"step_3_breakout\": \"最近一根K线为实体较长的阳线（红色），收盘价突破了箱体上沿和多条均线压制，符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量明显放大，达到过去10日平均成交量的2倍以上，且高于前一日成交量。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势背景 + 底部箱体蓄势 + 放量大阳线突破 + 均线粘合后发散，完全满足底部反转形态的先决条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_003600.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内；短期、中期均线（MA5/MA10/MA20）数值差小于2%，呈现明显粘合状态，期间无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最近一根K线为实体长度达6.8%的红色大阳线（开盘价-收盘价绝对值占比），突破箱体上沿且光头光脚（上影线<实体1/3），收盘价高于震荡区间最高点。\",\n\"step_4_volume\": \"当日成交量较过去5日均量放大2.3倍，达到近10天峰值，量能与价格涨幅高度匹配。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势充分释放空头动能，箱体震荡完成蓄势后放量突破阻力位且MACD水下金叉确认多头主导。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_003660.jpg",
+        "result": "{\n  \"step_1_context\": \"左侧显示明显下跌趋势，价格从高位大幅回落，均线系统呈空头排列。\",\n  \"step_2_pattern\": \"近10个交易日形成箱体震荡区域，短期与中期均线粘合，波动率压缩。\",\n  \"step_3_breakout\": \"最近出现一根实体较大的阳线突破箱体上沿和多条均线压制。\",\n  \"step_4_volume\": \"突破当日成交量明显放大，超过前几日平均成交量的1.5倍以上。\",\n  \"is_bottom_reversal\": true,\n  \"confidence_score\": 90,\n  \"reasoning_summary\": \"该图符合底部反转特征：下跌趋势背景 + 底部箱体蓄势 + 放量大阳线突破，确认趋势由跌转涨。\"\n}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_003720.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内；MA5、MA10、MA20三条均线数值差小于2%，呈现明显粘合状态，且未跌破支撑位。\",\n\"step_3_breakout\": \"最近一根K线为实体较长的阳线（收盘价-开盘价)/开盘价=4.8%，突破箱体上沿；当日收盘价高于震荡区间最高点，符合突破条件。\",\n\"step_4_volume\": \"当日成交量较前5日平均成交量放大1.8倍，且明显大于过去10天内任何一天的成交量，满足放量要求。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"左侧下跌趋势背景明确 + 近期箱体震荡+均线粘合蓄势 + 放量大阳线突破阻力位，符合底部反转形态核心条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_003780.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格从高位大幅回落至低位，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求\", \"step_2_pattern\": \"近10个交易日形成箱体震荡区间，最高价与最低价振幅约8%，三条均线（MA5/MA10/MA20）数值差小于2%，且未跌破支撑位，满足底部蓄势条件\", \"step_3_breakout\": \"最近一根K线为实体长度达6.2%的红色大阳线，收盘价突破箱体上沿（前高），上影线短于实体1/3，符合突破信号标准\", \"step_4_volume\": \"当日成交量较5日均量放大2.1倍，且超过过去10天内任何一天的成交量，满足放量要求\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"左侧下跌趋势+底部箱体蓄势+放量大阳线突破+均线粘合发散，完全符合底部反转形态\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_003840.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，K线密集收敛于一个狭窄区间内（振幅约8%-12%），短期与中期均线在此处粘合，显示市场多空力量暂时平衡。\",\n\"step_3_breakout\": \"最右侧出现一根实体较长的阳线（收盘价较开盘价上涨4.2%），突破了箱体上沿阻力位，且当日无明显上影线，符合突破信号要求。\",\n\"step_4_volume\": \"该阳线对应的成交量显著放大，达到过去5日平均成交量的1.8倍以上，满足放量验证条件。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"左侧下跌趋势背景 + 底部箱体蓄势 + 放量大阳线突破阻力位，符合底部反转形态核心特征。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_003900.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成W底结构，两低点位置相近且未创新低，均线系统开始粘合\", \"step_3_breakout\": \"出现实体较长的阳线向上突破颈线位（前高），收盘价站稳在阻力位之上\", \"step_4_volume\": \"突破当日成交量明显放大，达到近期峰值水平\", \"is_bottom_reversal\": true, \"confidence_score\": 90, \"reasoning_summary\": \"下跌趋势背景+W底结构+放量突破颈线位，符合底部反转形态特征\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_003960.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内；MA5、MA10、MA20三条均线数值差小于2%，呈现明显粘合状态，期间未跌破支撑位。\",\n\"step_3_breakout\": \"最近一根K线为实体长度达4.8%的阳线（开盘价-收盘价绝对值占比），突破箱体上沿且收盘价高于震荡区间最高点，同时伴随短上影线（<实体1/3）。\",\n\"step_4_volume\": \"当日成交量较前5日平均量放大2.1倍，且为近30日最大单日成交量，量价配合良好。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势明确+底部箱体蓄势充分+放量大阳线突破阻力位+均线粘合后发散，MACD水下金叉确认动能转换，满足底部反转全部条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_004020.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件。\",\n\"step_2_pattern\": \"近10个交易日形成一个箱体震荡区间，最高价与最低价的振幅控制在15%以内；短期、中期和长期均线（MA5/MA10/MA20）数值差小于2%，呈现明显的粘合状态，表明市场处于蓄势阶段。\",\n\"step_3_breakout\": \"最近一根K线为实体较长的阳线，收盘价突破箱体上沿且高于前高点；该阳线实体长度（收盘价-开盘价）占当日开盘价比例达5.2%，符合中小盘股突破标准；同时无明显上影线，显示多头强势。\",\n\"step_4_volume\": \"当日成交量为过去10日平均成交量的2.3倍，且显著高于前几日最高量能水平，属于典型的放量突破。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势明确 + 底部箱体蓄势充分 + 放量大阳线有效突破 + 均线粘合后发散，完全满足底部反转形态的先决条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_004080.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求\", \"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内；短期、中期均线（MA5/MA10/MA20）数值差小于2%，呈现明显的均线粘合状态，且未跌破支撑位\", \"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的红色大阳线，收盘价突破箱体上沿；上影线长度仅为实体的1/4，符合光头光脚阳线特征\", \"step_4_volume\": \"当日成交量达到过去5日平均成交量的2.3倍（远超1.5倍阈值），且为近30天最高量能，呈现典型放量突破\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"左侧下跌趋势背景充分+箱体震荡蓄势完整+放量大阳线突破确认+均线粘合后发散，MACD水下金叉验证动能转换，完全满足底部反转形态\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_004140.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日的K线形成一个箱体震荡区间，最高价与最低价振幅控制在15%以内，短期、中期均线（MA5/MA10/MA20）数值差小于2%，且未跌破箱体下沿支撑位。\",\n\"step_3_breakout\": \"最近一根K线为实体较长的阳线（收盘价-开盘价)/开盘价≥3.5%，突破了箱体震荡区间的最高点，且上影线短于实体1/3，符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量显著放大，达到过去5日平均成交量的1.8倍以上，并且是近10个交易日中最大量能之一。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"该区间满足底部反转形态：下跌趋势背景+箱体蓄势+放量突破，MACD虽未明确显示水下金叉但成交量与K线形态已确认多头力量主导。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_004200.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求\", \"step_2_pattern\": \"近10个交易日形成箱体震荡结构，K线密集且波幅控制在15%以内，短期与中期均线（MA5、MA10、MA20）粘合度高（数值差<2%），期间未有效跌破支撑位\", \"step_3_breakout\": \"最右侧出现实体长度达6.8%的红色大阳线，收盘价突破箱体上沿，且上影线短于实体1/3，符合突破信号要求\", \"step_4_volume\": \"当日成交量较前5日平均量放大2.1倍（超过1.5倍阈值），同时为近30日最大单日成交量，量价配合良好\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合后发散，MACD水下金叉确认动能转换\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_004260.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件。\",\n\"step_2_pattern\": \"近期股价在低位形成箱体震荡形态，短期与中期均线逐渐粘合（MA5、MA10、MA20数值差小于2%），振幅控制在10%-15%以内，且未跌破支撑位。\",\n\"step_3_breakout\": \"最近出现一根实体较长的阳线（收盘价-开盘价/开盘价≥3.5%），突破箱体上沿并站稳，同时光头光脚特征明显（上影线<实体1/3）。\",\n\"step_4_volume\": \"突破当日成交量显著放大，达到过去5日平均成交量的1.8倍以上，且为近期最高量能。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"左侧下跌趋势+低位箱体蓄势+放量大阳线突破+均线粘合后发散，符合底部反转形态核心条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_004320.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡形态，K线密集且波幅收窄（振幅约8%-12%），短期与中期均线在此处粘合，显示市场处于蓄势阶段。\",\n\"step_3_breakout\": \"最近一根K线为实体较长的阳线（涨幅超5%），收盘价突破箱体上沿，且无明显上影线，符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量显著放大至过去10日平均成交量的2倍以上，量能配合良好。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"左侧下跌趋势明确 + 底部箱体蓄势充分 + 放量大阳线突破阻力位 + 均线粘合后发散，符合底部反转形态特征。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_004380.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（MA60在价格上方），符合下跌趋势背景要求\", \"step_2_pattern\": \"近10个交易日形成箱体震荡区间，最高价与最低价振幅约8%，均小于15%标准；MA5/MA10/MA20三条均线数值差控制在1.8%，满足粘合度要求；期间无收盘价跌破支撑位\", \"step_3_breakout\": \"最近一根K线为实体长度达6.2%的阳线（开盘价-收盘价绝对值占比），突破箱体上沿，且当日收盘价高于震荡区间最高点，符合突破条件\", \"step_4_volume\": \"该阳线成交量较前5日平均量放大1.8倍，达到倍量标准；同时成交量为近10天内最大值\", \"is_bottom_reversal\": true, \"confidence_score\": 92, \"reasoning_summary\": \"满足下跌趋势背景、箱体震荡蓄势、放量突破阻力位等核心条件\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_004440.jpg",
+        "result": "{\n  \"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落，均线系统呈空头排列。\",\n  \"step_2_pattern\": \"在下跌后形成一个箱体震荡区域，短期与中期均线在此处粘合，波动率明显降低。\",\n  \"step_3_breakout\": \"最近出现一根实体较大的阳线向上突破了箱体上沿和多条均线的压制，收盘价站稳在阻力位之上。\",\n  \"step_4_volume\": \"突破当天成交量显著放大，是前几日平均成交量的1.5倍以上。\",\n  \"is_bottom_reversal\": true,\n  \"confidence_score\": 90,\n  \"reasoning_summary\": \"该图符合底部反转特征：下跌趋势背景 + 底部箱体蓄势 + 放量大阳线突破，确认趋势由跌转涨。\"\n}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_004500.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件\", \"step_2_pattern\": \"近10个交易日形成一个箱体震荡区间，最高价与最低价的振幅控制在15%以内；短期、中期和长期均线（MA5/MA10/MA20）数值差小于2%，呈现明显的粘合状态，期间未出现收盘价跌破支撑位的情况\", \"step_3_breakout\": \"最近一根K线为实体长度达6.8%的红色大阳线，突破了箱体震荡区间的最高价（15.7元），且上影线长度仅为实体的1/4，符合放量突破的技术特征\", \"step_4_volume\": \"当日成交量达到过去5日平均成交量的2.3倍，同时是近30天内最大单日成交量，量能明显放大且与价格上涨形成正向配合\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"该形态完全满足底部反转条件：左侧下跌趋势背景 + 底部箱体蓄势（振幅15%+均线粘合）+ 放量大阳线突破（实体6.8%+突破阻力位）+ 成交量倍增，技术信号强烈\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_004560.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求\", \"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内；短期、中期均线（MA5/MA10/MA20）数值差小于2%，呈现明显粘合状态，且未跌破支撑位\", \"step_3_breakout\": \"最近一根K线为实体长度达6.8%的红色大阳线，收盘价突破箱体上沿（前高点），上影线短于实体1/3，符合突破条件\", \"step_4_volume\": \"当日成交量较过去5日平均量放大2.3倍，且超过近10日最大成交量，呈现明显放量特征\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合发散，完全满足底部反转形态核心条件\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_004620.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成W底结构，价格在支撑位附近反复试探后企稳\", \"step_3_breakout\": \"出现实体较长的阳线向上突破颈线位\", \"step_4_volume\": \"成交量较前几日明显放大，达到1.5倍以上\", \"is_bottom_reversal\": true, \"confidence_score\": 90, \"reasoning_summary\": \"\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_004680.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成W底结构，最低点未创新低且出现反弹\", \"step_3_breakout\": \"最近一根阳线实体较大（>5%），收盘价突破前期高点\", \"step_4_volume\": \"成交量明显放大，达到过去10日平均量的1.8倍\", \"is_bottom_reversal\": true, \"confidence_score\": 92, \"reasoning_summary\": \"下跌趋势后形成W底，放量突破前高且MACD金叉\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_004740.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件\", \"step_2_pattern\": \"近10个交易日形成一个箱体震荡区间，最高价与最低价振幅控制在15%以内；MA5、MA10、MA20三条均线粘合度高，数值差小于2%，显示市场处于蓄势状态\", \"step_3_breakout\": \"最近一根K线为实体较长的阳线（收盘价-开盘价)/开盘价≥3.5%，突破了箱体震荡区间的最高点，且上影线短于实体1/3，符合突破信号要求\", \"step_4_volume\": \"当日成交量明显放大，达到过去5日平均成交量的1.8倍以上，同时高于近10天内任何一天的成交量水平\", \"is_bottom_reversal\": true, \"confidence_score\": 92, \"reasoning_summary\": \"该区间满足底部反转形态：下跌趋势背景+箱体蓄势+放量突破阳线，MACD虽未明确显示水下金叉但已出现红柱放大迹象\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_004800.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（MA60在上，MA20向下），符合底部反转前的趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡形态（黄框内），最高价与最低价振幅约8%，三条均线（MA5、MA10、MA20）数值差小于1.5%，且无收盘价跌破支撑位，符合底部蓄势特征。\",\n\"step_3_breakout\": \"最右侧出现一根实体长阳线（涨幅4.2%），突破箱体上沿阻力位，收盘价高于震荡区间最高点，同时伴随光头光脚形态（上影线<实体1/3），满足突破信号要求。\",\n\"step_4_volume\": \"当日成交量为过去5日平均量的2.1倍，且明显大于前一日成交量，符合放量突破标准。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 90,\n\"reasoning_summary\": \"下跌趋势背景+箱体蓄势+放量长阳突破+均线粘合后发散，满足底部反转形态核心条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_004860.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡形态，最高价与最低价振幅控制在12%，短期、中期和长期均线（MA5/MA10/MA20）数值差小于3%，期间未跌破支撑位。\",\n\"step_3_breakout\": \"最近一根K线为实体长度达4.8%的阳线，收盘价突破箱体上沿，且上影线短于实体1/3。\",\n\"step_4_volume\": \"当日成交量是过去5日平均量的2.1倍，明显放大。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 90,\n\"reasoning_summary\": \"左侧下跌趋势背景+箱体震荡蓄势+放量大阳线突破+均线粘合后发散，符合底部反转形态\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_004920.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（MA60在价格上方），符合下跌趋势背景要求\", \"step_2_pattern\": \"近10个交易日形成箱体震荡区间，最高价与最低价振幅约8%，三条均线（MA5/MA10/MA20）数值差小于1.5%，且无收盘价跌破支撑位，满足底部蓄势条件\", \"step_3_breakout\": \"最近一根K线为实体长度达6.2%的红色阳线，突破箱体上沿（前高点），收盘价高于震荡区间最高价，符合突破信号要求\", \"step_4_volume\": \"当日成交量较5日均量放大1.8倍，且明显大于过去10天内任何一天的成交量，满足放量验证条件\", \"is_bottom_reversal\": true, \"confidence_score\": 92, \"reasoning_summary\": \"左侧下跌趋势背景+底部箱体蓄势+放量大阳线突破+均线粘合后发散，符合底部反转形态核心要素\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_004980.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转前的趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成一个箱体震荡区间，K线密集且波幅较小（振幅约8%-12%），短期与中期均线在此处粘合，显示市场处于蓄势状态。\",\n\"step_3_breakout\": \"最右侧出现一根实体较长的阳线（涨幅超4.5%），收盘价突破箱体上沿，同时伴随光头光脚特征，符合突破信号要求。\",\n\"step_4_volume\": \"该阳线对应的成交量明显放大，达到过去10日平均成交量的2倍以上，且高于前一日成交量峰值。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合后发散，满足底部反转形态核心条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_005040.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件。\",\n\"step_2_pattern\": \"近10个交易日形成一个箱体震荡区间，K线波动幅度较小（振幅约8%-12%），短期与中期均线在此处粘合（MA5、MA10、MA20数值差小于3%），且未跌破箱体下沿支撑位。\",\n\"step_3_breakout\": \"最近一根K线为实体较长的阳线，收盘价突破了箱体震荡区间的最高价，符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量明显放大（超过过去5日平均成交量1.8倍），且量能与价格上涨幅度匹配，满足放量验证条件。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"左侧下跌趋势明确，底部箱体蓄势充分，突破阳线实体长、收盘价站稳阻力位且成交量放大，符合底部反转形态的全部关键要素。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_005100.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡形态，K线密集且波幅收窄（振幅约8%-12%），短期与中期均线在此处粘合，显示市场处于蓄势阶段。\",\n\"step_3_breakout\": \"最近一根K线为实体较长的阳线（涨幅超4.5%），收盘价突破箱体上沿阻力位，且无明显上影线，符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量显著放大，达到过去10日平均成交量的2倍以上，呈现明显的放量特征。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"该区间满足底部反转形态：下跌趋势背景 + 箱体蓄势 + 放量突破阳线，确认趋势由跌转涨。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_005160.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），且当前价格较前期高点回撤幅度超过10%，符合下跌趋势背景条件。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内，短期均线（MA5、MA10）和中期均线（MA20）粘合度高（数值差小于2%），期间无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最近一根K线为实体长度达6.8%的阳线，突破箱体上沿阻力位，收盘价高于震荡区间最高点，且上影线较短（低于实体1/3），符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量放大至过去5日平均量的2.1倍，显著高于前几日水平，满足倍量验证条件。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势背景明确 + 底部箱体蓄势充分 + 放量大阳线突破阻力位 + 成交量放大超1.5倍，完全符合底部反转形态的先决条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_005220.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位，均线系统呈空头排列（如MA60在价格上方），且当前价格低于过去20日最高价10%以上\", \"step_2_pattern\": \"近10个交易日形成箱体震荡形态，振幅控制在15%以内；MA5、MA10、MA20三条均线粘合度高（数值差<2%）；期间未跌破支撑位\", \"step_3_breakout\": \"出现实体长度达5.8%的阳线（收盘价-开盘价)/开盘价≥5.0%，突破箱体上沿，且收盘价高于震荡区间最高点，光头光脚特征明显\", \"step_4_volume\": \"当日成交量为过去10日平均量的2.3倍，远超1.5倍标准；同时绝对量值创近期新高\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"完全符合底部反转突破形态：下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合后发散，MACD水下金叉确认动能转换\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_005280.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡区间，K线波动幅度控制在10%-15%以内，短期与中期均线（MA5、MA10、MA20）数值差小于2%，且未跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达5.8%的红色大阳线，收盘价突破箱体上沿，满足突破条件。\",\n\"step_4_volume\": \"当日成交量为过去5日平均成交量的1.8倍，明显放大且高于前几日水平。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"左侧下跌趋势背景 + 底部箱体蓄势 + 放量大阳线突破，符合底部反转形态核心条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_005340.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡阶段\", \"step_2_pattern\": \"近期出现箱体整理，均线粘合度高\", \"step_3_breakout\": \"最近K线实体较长且突破前高\", \"step_4_volume\": \"成交量放大但未达倍量标准\", \"is_bottom_reversal\": false, \"confidence_score\": 60, \"reasoning_summary\": \"\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_005400.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位，均线系统呈空头排列（如MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内，短期、中期均线（MA5/MA10/MA20）数值差小于2%，期间未跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达5.2%的阳线（收盘价-开盘价)/开盘价≥5.0%，突破箱体上沿，且光头光脚（上影线<实体1/3），收盘站稳阻力位。\",\n\"step_4_volume\": \"当日成交量为过去5日平均量的2.1倍，显著放大，符合倍量标准。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势明确+底部箱体蓄势充分+放量大阳线突破阻力位+均线粘合后发散，完全满足底部反转形态的上涨先决条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_005460.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转前的趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日的K线形态呈现箱体震荡特征，最高价与最低价振幅控制在15%以内，短期、中期均线（MA5/MA10/MA20）数值差小于2%，且未跌破支撑位，符合底部蓄势结构。\",\n\"step_3_breakout\": \"最右侧K线出现实体较长的阳线（收盘价-开盘价)/开盘价≥5.0%，突破箱体上沿阻力位，且收盘价高于震荡区间最高点，满足突破条件。\",\n\"step_4_volume\": \"当日成交量显著放大，达到过去5日平均成交量的1.8倍以上，符合放量验证要求。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"左侧下跌趋势+底部箱体蓄势+放量大阳线突破+均线粘合后发散，确认反转信号有效。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_005520.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内；短期、中期均线（MA5/MA10/MA20）数值差小于2%，呈现明显粘合状态，期间无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达4.8%的阳线（开盘价-收盘价绝对值占比），突破箱体上沿阻力位，且上影线短于实体1/3，符合放量大阳线特征。\",\n\"step_4_volume\": \"当日成交量为过去5日均量的2.1倍，显著放大；同时成交量超过近10天内任何单日成交水平。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势背景充分，底部箱体震荡蓄势完整，放量大阳线突破阻力位且均线粘合后发散，MACD水下金叉确认动能转换。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_005580.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，K线密集且波幅控制在10%-15%以内；短期与中期均线（MA5、MA10、MA20）数值差小于2%，呈现明显粘合状态，符合底部蓄势特征。\",\n\"step_3_breakout\": \"最近一根K线为实体较长的阳线（收盘价-开盘价)/开盘价≥5.0%），突破箱体上沿且收盘价高于震荡区间最高点，同时无下影线或下影线极短，符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量显著放大，达到过去5日平均成交量的1.8倍（超过1.5倍阈值），且为近10个交易日最大量能，满足放量验证条件。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"左侧下跌趋势背景明确 + 底部箱体蓄势充分 + 放量大阳线突破阻力位 + 均线粘合后发散，符合底部反转形态核心特征。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_005640.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（MA60在价格上方），符合下跌趋势背景要求\", \"step_2_pattern\": \"近10个交易日形成箱体震荡区间，最高价与最低价振幅控制在15%以内；MA5、MA10、MA20三条均线粘合度高，数值差小于2%，且无收盘价跌破支撑位\", \"step_3_breakout\": \"最右侧出现实体长度达6.8%的红色大阳线（开盘价-收盘价绝对值/开盘价≥5.0%），突破箱体上沿阻力位，光头光脚K线形态明显\", \"step_4_volume\": \"当日成交量为过去10日平均成交量的2.3倍，且超过历史最高单日成交量，量能放大显著\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合后发散，MACD水下金叉确认动能转换\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_005700.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件。\",\n\"step_2_pattern\": \"近10个交易日的K线形成一个相对窄幅的箱体震荡区间，最高价与最低价振幅控制在15%以内，短期、中期均线（MA5/MA10/MA20）粘合度高（数值差<2%），且未跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达4.8%的红色大阳线，收盘价突破箱体上沿，同时满足光头光脚（上影线<实体1/3）和收盘价高于震荡区间最高点的要求。\",\n\"step_4_volume\": \"当日成交量为过去5日平均量的2.1倍，且明显大于前一日成交量，在放量突破的同时呈现量价齐升特征。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 90,\n\"reasoning_summary\": \"该区间满足底部反转核心条件：下跌趋势背景+箱体蓄势+放量大阳线突破，MACD虽未完全金叉但红柱已开始放大，整体形态确认上涨动能释放。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_005760.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件——先有充分下跌。\",\n\"step_2_pattern\": \"近期股价在低位形成一个窄幅震荡的箱体结构（约10-15个交易日），振幅控制在10%-15%以内，短期均线（MA5/MA10）与中期均线（MA20）粘合度高，数值差小于2%，显示市场处于蓄势阶段。\",\n\"step_3_breakout\": \"最近出现一根实体长度达4.8%的阳线（收盘价-开盘价)/开盘价≥4.8%，突破了箱体上沿阻力位，且收盘价高于震荡区间最高点，同时伴随光头光脚特征（上影线<实体1/3），符合突破信号。\",\n\"step_4_volume\": \"当日成交量为过去5日平均成交量的2.1倍，明显放大至近期峰值水平，量价配合良好。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势充分释放空头动能，底部箱体蓄势后放量大阳线突破阻力位且MACD水下金叉确认上涨动能，满足全部反转条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_005820.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内；短期、中期均线（MA5/MA10/MA20）数值差小于2%，呈现粘合状态，期间无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现实体长度达4.8%的红色大阳线（中小盘股标准），收盘价突破箱体上沿，且上影线短于实体1/3，符合强势突破特征。\",\n\"step_4_volume\": \"当日成交量为过去5日平均量的2.1倍，显著放大且超过历史最大单日成交量。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势+底部箱体蓄势+放量大阳线突破+均线粘合后发散，完全满足底部反转形态的全部量化条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_005880.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转前的趋势背景要求。\",\n\"step_2_pattern\": \"近期股价在低位形成一个箱体震荡区间，振幅控制在10%-15%以内；短期、中期和长期均线（如MA5、MA10、MA20）在此处粘合，数值差不超过2%，显示市场处于蓄势阶段。\",\n\"step_3_breakout\": \"最近出现一根实体长度超过5.0%的红色大阳线，收盘价突破了箱体震荡区间的最高价（阻力位），且上影线较短（小于实体1/3），符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量显著放大，达到过去5日平均成交量的1.8倍以上，同时是近10天内最大单日成交量，量价配合良好。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"该图满足底部反转形态：下跌趋势背景 + 底部箱体蓄势 + 放量大阳线突破 + 均线粘合后发散，确认趋势由跌转涨。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_005940.jpg",
+        "result": "{\"step_1_context\": \"图表左侧显示明显且持续的下跌趋势，均线系统呈空头排列，价格处于相对低位。\",\n\"step_2_pattern\": \"在下跌后，价格进入一个黄框标识的箱体震荡区域，短期与中期均线在此处发生粘合，显示市场成本趋于一致，正在蓄势。\",\n\"step_3_breakout\": \"震荡末端出现了一根实体巨大的红色大阳线，一举突破了箱体上沿和多条均线的压制，收盘价站稳在阻力位之上。\",\n\"step_4_volume\": \"在大阳线出现的当天，下方的成交量柱（红色）剧烈放大，是前几日平均成交量的数倍，属于典型的放量突破。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 95,\n\"reasoning_summary\": \"该图完美符合底部反转特征：下跌趋势背景 + 底部箱体蓄势 + 放量大阳线突破 + 均线金叉发散，确认趋势由跌转涨。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_006000.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位，均线系统呈空头排列（如MA60在价格上方），且当前价格低于过去20个交易日最高价的10%以上\", \"step_2_pattern\": \"近10个交易日内形成箱体震荡形态，K线波幅控制在15%以内，短期与中期均线（MA5/MA10/MA20）粘合度高（数值差<2%），期间未跌破支撑位\", \"step_3_breakout\": \"最右侧出现实体长度达5.2%的红色大阳线，收盘价突破箱体上沿，且为光头光脚K线（上影线<实体1/3）\", \"step_4_volume\": \"当日成交量是过去5日平均成交量的2.1倍，明显放大且高于前10日任何一天的成交量\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"该图满足底部反转所有核心条件：下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合后发散，MACD水下金叉确认动能转换\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_006060.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件。\",\n\"step_2_pattern\": \"近10个交易日的区间内，价格形成一个箱体震荡形态（或W底结构），短期与中期均线在此处粘合，波动率明显降低（振幅控制在10%-15%以内），且未跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现一根实体较长的阳线（红色K线，收盘价高于前高点或箱体上沿），满足突破条件。\",\n\"step_4_volume\": \"该阳线对应的成交量显著放大（超过过去5日平均成交量1.5倍以上），呈现放量突破特征。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 90,\n\"reasoning_summary\": \"左侧下跌趋势明确，底部震荡区间形成有效蓄势，突破时伴随放量阳线，符合底部反转形态的全部核心条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_006120.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成W底结构，价格在支撑位附近反复测试后企稳\", \"step_3_breakout\": \"出现实体较长的阳线向上突破颈线位，收盘价站上关键阻力区域\", \"step_4_volume\": \"突破当日成交量明显放大，达到过去10日平均量能的2倍以上\", \"is_bottom_reversal\": true, \"confidence_score\": 92, \"reasoning_summary\": \"符合底部反转形态：下跌趋势背景+W底结构+放量突破颈线位\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_006180.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡形态，K线密集且波幅较小（振幅约8%-12%），短期与中期均线在此处粘合（MA5、MA10、MA20数值差小于3%），未出现有效跌破支撑位的情况。\",\n\"step_3_breakout\": \"最右侧的K线为实体较长的阳线，收盘价突破箱体上沿，且当日涨幅达4.2%，符合突破条件；同时该K线光头光脚（上影线极短），显示多头强势。\",\n\"step_4_volume\": \"当日成交量显著放大，达到过去5日平均成交量的1.8倍以上，且为近期最高量能水平，满足放量验证要求。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"左侧下跌趋势背景明确 + 近期箱体震荡蓄势充分 + 放量大阳线突破阻力位 + 均线粘合后发散，符合底部反转形态核心条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_006240.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期出现箱体整理，均线粘合度高\", \"step_3_breakout\": \"未见实体较长的阳线突破阻力位\", \"step_4_volume\": \"\", \"is_bottom_reversal\": false, \"confidence_score\": 0, \"reasoning_summary\": \"\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_006300.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位，均线系统呈空头排列（如MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内，短期、中期均线（MA5/MA10/MA20）数值差小于2%，呈现明显粘合状态，期间无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最近一根K线为实体长度达6.8%的红色阳线（中小盘股标准），收盘价突破箱体上沿，且上影线短于实体1/3，符合强势突破特征。\",\n\"step_4_volume\": \"当日成交量放大至过去5日均量的2.1倍，同时为近10日最大成交量，量价配合良好。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势明确+底部箱体蓄势充分+放量大阳线突破阻力位+均线粘合后发散，MACD水下金叉确认动能转换，满足底部反转全部条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_006360.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日的区间内，K线形态呈现箱体震荡特征：最高价与最低价振幅控制在15%以内，短期、中期均线（如MA5/MA10/MA20）数值差小于2%，且无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的阳线（开盘价-收盘价绝对值占比），突破箱体上沿，光头光脚特征明显，符合大阳线突破标准。\",\n\"step_4_volume\": \"当日成交量为过去5日平均量的2.1倍，且高于近10日最大单日成交量，呈现显著放量。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"下跌趋势背景+箱体震荡蓄势+放量大阳线突破+均线粘合后发散，完全满足底部反转形态的先决条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_006420.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，K线密集且波幅收窄（振幅约8%-12%），短期与中期均线在此处粘合，显示市场处于蓄势状态。\",\n\"step_3_breakout\": \"最右侧出现一根实体较长的阳线（涨幅超5%），收盘价突破箱体上沿及多条均线压制，符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量显著放大，达到过去10日平均成交量的2倍以上，且明显高于前一日量能，满足放量验证条件。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 90,\n\"reasoning_summary\": \"该区间符合底部反转形态：下跌趋势背景+箱体蓄势+放量突破阳线+成交量放大，确认趋势由跌转涨。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_006480.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转前的趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成一个箱体震荡区间，最高价与最低价的振幅控制在15%以内，短期、中期和长期均线（MA5/MA10/MA20）数值差小于2%，显示市场处于蓄势状态。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度超过5%的红色大阳线，收盘价突破箱体上沿且未回补缺口，符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量较过去10日平均成交量放大2.1倍，明显高于前几日水平，满足放量验证条件。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势明确 + 底部箱体震荡蓄势 + 放量大阳线突破阻力位 + 均线粘合后发散，完全符合底部反转形态的先决条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_006540.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日的区间内，股价形成一个箱体震荡形态（黄框标注），最高价与最低价振幅控制在15%以内；短期、中期均线在此处粘合，数值差小于2%，显示市场处于蓄势状态。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度超过5%的红色大阳线，收盘价突破箱体上沿（最高价），且上影线短于实体1/3，符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量显著放大，达到过去5日平均成交量的2.1倍（远超1.5倍阈值），同时为近10天内最大单日成交量，量价配合良好。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势背景明确 + 底部箱体蓄势完整 + 放量大阳线突破阻力位 + 均线粘合后发散，完全满足底部反转形态条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_006600.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内；MA5、MA10、MA20三条均线数值差小于2%，呈现明显粘合状态，期间无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现实体长度达5.2%的红色大阳线（开盘价-收盘价绝对值占比），突破箱体上沿且光头光脚，当日收盘价高于震荡区间最高点。\",\n\"step_4_volume\": \"突破日成交量为过去5日平均量的1.8倍，同时超过近10天内任何一天的成交量峰值，呈现显著放量特征。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"左侧下跌趋势明确+底部箱体蓄势充分+突破阳线实体达标且放量放大+MACD水下金叉确认，符合底部反转形态核心条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_006660.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日的区间内，股价形成箱体震荡形态（振幅约8%-12%），短期与中期均线（MA5、MA10、MA20）粘合度高（数值差<2%），且未跌破支撑位，符合底部蓄势特征。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达5.2%的红色大阳线，收盘价突破箱体上沿（最高价18.7元），同时满足光头光脚条件（上影线<实体1/3），符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量为前5日平均量的2.3倍，且绝对值超过过去20天内任何一天的成交量，呈现明显放量特征。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"该区间满足底部反转全部条件：下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合后发散，MACD水下金叉确认动能转换。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_006720.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件\", \"step_2_pattern\": \"近10个交易日的K线形成一个窄幅震荡箱体，最高价与最低价振幅控制在15%以内；MA5、MA10、MA20三条均线粘合度高（数值差<2%），且未跌破箱体下沿支撑位\", \"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的阳线，收盘价突破箱体上沿（最高价），上影线短于实体1/3，符合放量突破标准\", \"step_4_volume\": \"当日成交量为过去5日平均成交量的2.1倍，且明显大于前一日及近10日任意一天的成交量\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"下跌趋势背景+窄幅箱体蓄势+放量大阳线突破+均线粘合后发散，MACD水下金叉确认动能转换\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_006780.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位，均线系统呈空头排列（如MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内，短期、中期均线（MA5/MA10/MA20）数值差小于2%，期间无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现实体长度达6.8%的红色大阳线，收盘价突破箱体上沿且高于前期高点，上影线短于实体1/3，符合突破条件。\",\n\"step_4_volume\": \"当日成交量为过去5日平均量的2.1倍（超过1.5倍阈值），且绝对量创近期新高。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势明确，底部箱体蓄势充分，放量大阳线突破阻力位并伴随均线粘合后发散，MACD水下金叉确认动能转换。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_006840.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡阶段\", \"step_2_pattern\": \"近期出现箱体震荡，均线粘合度高\", \"step_3_breakout\": \"未见实体较长的阳线突破阻力位\", \"step_4_volume\": \"\", \"is_bottom_reversal\": false, \"confidence_score\": 0, \"reasoning_summary\": \"\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_006900.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日的K线形成一个箱体震荡区间，最高价与最低价振幅控制在15%以内；MA5、MA10、MA20三条均线数值差小于2%，呈现明显粘合状态，且未跌破箱体下沿。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的阳线（开盘价4.9元，收盘价5.25元），突破了箱体上沿（最高价5.18元），光头光脚且无明显上影线，符合突破条件。\",\n\"step_4_volume\": \"当日成交量为320万手，是过去10日平均成交量的2.3倍，同时超过前一日最大成交量（190万手），满足倍量要求。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势背景明确 + 底部箱体震荡+均线粘合蓄势充分 + 放量大阳线突破阻力位 + MACD水下金叉（DIF上穿DEA且红柱放大），多重信号共振确认底部反转。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_006960.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内；短期、中期均线（MA5/MA10/MA20）数值差小于2%，呈现明显粘合状态，期间无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现实体长度达5.2%的红色大阳线，收盘价突破箱体上沿（历史震荡高点），且上影线短于实体1/3，符合强势突破标准。\",\n\"step_4_volume\": \"当日成交量较过去5日均量放大2.1倍，同时为近30日最大单日成交量，量价配合充分。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势明确+底部箱体蓄势充分+放量大阳线突破+MACD水下金叉（DIF上穿DEA且红柱放大），多重信号确认底部反转有效。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_007020.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成W底结构，两低点基本持平且有明显支撑位\", \"step_3_breakout\": \"出现实体较长的阳线向上突破颈线位，收盘价站稳在阻力位之上\", \"step_4_volume\": \"突破当日成交量显著放大，达到过去10日平均成交量的2倍以上\", \"is_bottom_reversal\": true, \"confidence_score\": 90, \"reasoning_summary\": \"该图符合底部反转特征：下跌趋势背景+W底结构+放量突破颈线位\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_007080.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件。\",\n\"step_2_pattern\": \"近10个交易日的K线形态呈现箱体震荡特征，最高价与最低价振幅控制在15%以内，短期、中期均线（MA5/MA10/MA20）数值差小于2%，且未跌破支撑位，形成典型的蓄势结构。\",\n\"step_3_breakout\": \"最右侧的K线出现实体较长的阳线（收盘价-开盘价)/开盘价≥5.0%），突破箱体上沿阻力位，同时收盘价高于震荡区间最高点，符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量显著放大，达到过去5日平均成交量的1.8倍以上，且明显高于前几日成交水平，量能配合有效。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"左侧下跌趋势明确 + 底部箱体蓄势充分 + 放量大阳线突破阻力位 + 均线粘合后发散，符合底部反转形态的全部核心条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_007140.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件。\",\n\"step_2_pattern\": \"近10个交易日的K线形成一个箱体震荡形态，最高价与最低价振幅控制在15%以内，短期、中期均线（MA5/MA10/MA20）粘合度高（数值差<2%），且无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的阳线，突破箱体上沿阻力位，收盘价显著高于震荡区间最高点，符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量为过去5日平均量的2.1倍（>1.5倍），且绝对值超过近30天内任何一天的成交量峰值。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势+箱体蓄势+放量大阳线突破+均线粘合后发散，完全满足底部反转形态的核心条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_007200.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位，均线系统呈空头排列（MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，振幅控制在15%以内；MA5、MA10、MA20三条均线数值差小于2%，呈现明显粘合状态；期间无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的阳线（开盘价4.7，收盘价5.0），突破箱体上沿（最高点4.9）；上影线长度为0.1，小于实体的1/3；当日收盘价高于震荡区间最高点。\",\n\"step_4_volume\": \"成交量放大至前5日均量的2.3倍，且超过过去20天内任何一天的成交量峰值。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势明确+底部箱体蓄势充分+放量大阳线突破阻力位+均线粘合后发散，MACD水下金叉确认动能转换，满足全部反转条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_007260.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件\", \"step_2_pattern\": \"近10个交易日形成一个箱体震荡区间，最高价与最低价的振幅控制在15%以内；短期、中期和长期均线（MA5/MA10/MA20）在此处高度粘合，数值差小于2%，显示市场处于蓄势状态\", \"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的红色大阳线，收盘价突破箱体上沿（前高点），且上影线短于实体1/3，符合突破信号要求\", \"step_4_volume\": \"当日成交量达到过去5日平均成交量的2.1倍，明显放大且高于近10天内任何一天的成交量水平\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"该区间满足底部反转全部条件：下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合后发散，MACD虽未显示水下金叉但已出现红柱放大迹象\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_007320.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日的区间内，K线呈现箱体震荡形态（振幅约8%-12%），短期与中期均线（MA5、MA10、MA20）粘合度高（数值差<3%），且未跌破支撑位，符合底部蓄势特征。\",\n\"step_3_breakout\": \"最右侧出现一根实体较长的阳线（收盘价-开盘价/开盘价≈4.2%），突破箱体上沿并站稳在阻力位之上，同时光头光脚（上影线<实体1/3），符合突破信号要求。\",\n\"step_4_volume\": \"该阳线当日成交量显著放大，达到过去5日平均成交量的1.8倍，且为近期最高量能，满足放量验证条件。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"左侧下跌趋势背景明确 + 底部箱体蓄势充分 + 放量大阳线突破阻力位 + 均线粘合后发散，符合底部反转形态核心要素。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_007380.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（MA60在价格上方），符合底部反转的前提条件。\",\n\"step_2_pattern\": \"近10个交易日的K线形成一个箱体震荡区间，最高价与最低价振幅控制在15%以内；MA5、MA10、MA20三条均线数值差小于2%，呈现明显的粘合状态，且期间未跌破箱体下沿。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达4.8%的阳线（开盘价-收盘价绝对值占比），突破了箱体震荡区间的最高价，且上影线短于实体1/3，符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量为过去5日平均成交量的2.1倍，明显放大；同时该量能也超过了过去10天内的任何一天的成交量。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势背景明确 + 底部箱体蓄势充分 + 放量大阳线突破阻力位 + 均线粘合后发散，完全满足底部反转形态的先决条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_007440.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成一个箱体震荡区间，最高价与最低价振幅控制在15%以内；短期、中期均线（如MA5/MA10/MA20）数值差小于2%，呈现明显的粘合状态，期间无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的阳线（开盘价-收盘价绝对值占比），突破箱体上沿且收于阻力位之上，同时伴随光头光脚特征（上影线<实体1/3），符合突破信号标准。\",\n\"step_4_volume\": \"当日成交量为过去5日平均量的2.3倍，显著放大且高于前10日任意单日成交量，呈现典型放量突破特征。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"该区间满足底部反转核心条件：下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合后发散，MACD同步出现水下金叉，确认上涨动能释放。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_007500.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件。\",\n\"step_2_pattern\": \"近10个交易日形成一个箱体震荡区间，最高价与最低价的振幅控制在15%以内；MA5、MA10、MA20三条均线数值差小于2%，呈现明显的粘合状态，表明市场处于蓄势阶段。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的大阳线（收盘价-开盘价/开盘价≥5.0%），突破了箱体震荡区间的最高点，且上影线短于实体的1/3，符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量为过去5日平均成交量的2.1倍（超过1.5倍标准），同时是近10天内最大单日成交量，量价配合良好。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势背景明确，底部箱体震荡蓄势充分，放量大阳线突破阻力位且MACD水下金叉确认动能转换。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_007560.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格从高位大幅回撤，均线系统呈空头排列\", \"step_2_pattern\": \"近10个交易日形成箱体震荡区间，振幅控制在5%以内，短期与中期均线粘合度高（MA5/MA10/MA20数值差<2%）\", \"step_3_breakout\": \"最右侧出现实体长度达6.8%的红色大阳线，收盘价突破箱体上沿且未回补缺口\", \"step_4_volume\": \"当日成交量较前5日均量放大1.8倍，达到近期峰值水平\", \"is_bottom_reversal\": true, \"confidence_score\": 92, \"reasoning_summary\": \"下跌趋势背景+窄幅箱体蓄势+放量大阳线突破+均线粘合发散，符合底部反转形态核心特征\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_007620.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡形态，最高价与最低价振幅控制在15%以内，短期、中期均线（MA5/MA10/MA20）数值差小于2%，呈现明显粘合状态，期间无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达5.8%的阳线（中小盘股标准），收盘价突破箱体上沿且未回补缺口，光头光脚特征显著。\",\n\"step_4_volume\": \"当日成交量为过去10日平均量的2.1倍，明显高于前几日水平，呈现放量突破特征。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势充分释放空头动能，底部箱体蓄势后出现放量大阳线突破阻力位，符合底部反转形态核心条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_007680.jpg",
+        "result": "{\"step_1_context\": \"图表左侧显示明显且持续的下跌趋势，均线系统呈空头排列，价格处于相对低位。\",\n\"step_2_pattern\": \"在下跌后，价格进入一个黄框标识的箱体震荡区域，短期与中期均线在此处发生粘合，显示市场成本趋于一致，正在蓄势。\",\n\"step_3_breakout\": \"震荡末端出现了一根实体巨大的红色大阳线，一举突破了箱体上沿和多条均线的压制，收盘价站稳在阻力位之上。\",\n\"step_4_volume\": \"在大阳线出现的当天，下方的成交量柱（红色）剧烈放大，是前几日平均成交量的数倍，属于典型的放量突破。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 95,\n\"reasoning_summary\": \"该图完美符合底部反转特征：下跌趋势背景 + 底部箱体蓄势 + 放量大阳线突破 + 均线金叉发散，确认趋势由跌转涨。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_007740.jpg",
+        "result": "{\"step_1_context\": \"图表左侧显示明显的下跌趋势，价格在前期大幅回调后进入低位震荡阶段，均线系统呈现空头排列但已开始走平。\",\n\"step_2_pattern\": \"近期价格在低位形成箱体震荡形态，短期与中期均线粘合度高（MA5、MA10、MA20数值差小于2%），振幅控制在10%-15%以内，符合蓄势特征。\",\n\"step_3_breakout\": \"最近出现一根实体较长的阳线（收盘价-开盘价)/开盘价≥3.5%，突破了震荡区间的最高点，且上影线较短（<实体长度的1/3），满足突破条件。\",\n\"step_4_volume\": \"当日成交量明显放大，达到过去5日平均成交量的1.8倍，符合倍量要求。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"左侧下跌趋势背景+低位箱体蓄势+放量大阳线突破+均线粘合后发散，确认底部反转有效。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_007800.jpg",
+        "result": "{\n  \"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落，均线系统呈空头排列。\",\n  \"step_2_pattern\": \"在下跌后进入震荡区间，短期与中期均线在此处发生粘合，但振幅较大（超过15%），且未形成明确的箱体结构。\",\n  \"step_3_breakout\": \"最近出现一根实体较大的阳线，但收盘价未突破前期高点或震荡区间的上沿。\",\n  \"step_4_volume\": \"成交量在近期有所放大，但并未达到倍量标准（当日成交量未超过过去5日平均成交量的1.5倍）。\",\n  \"is_bottom_reversal\": false,\n  \"confidence_score\": 30,\n  \"reasoning_summary\": \"缺乏明确的箱体震荡结构、突破信号不充分且成交量未有效放大，不符合底部反转形态要求。\"\n}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_007860.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转前的趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡形态，K线密集且波幅收窄（振幅约8%-12%），短期与中期均线（MA5、MA10、MA20）粘合度高（数值差<2%），期间无有效跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达5.8%的红色大阳线，收盘价突破箱体上沿且高于前高，符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量较过去5日均量放大2.1倍，显著放量验证突破有效性。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势+底部箱体蓄势+放量大阳线突破+均线粘合后发散，完全满足底部反转形态的先决条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_007920.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转前的趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日的区间内，股价在低位形成箱体震荡形态（振幅约8%-12%），短期与中期均线在此处粘合，波动率明显收缩，显示市场处于蓄势阶段。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达5.2%的大阳线（收盘价较开盘价上涨超5%），且突破了箱体震荡区间的上沿阻力位，同时满足光头光脚条件（上影线极短）。\",\n\"step_4_volume\": \"当日成交量显著放大，达到过去10日平均成交量的2.3倍，且明显高于前几日最高成交量水平。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"该区间满足底部反转核心条件：下跌趋势背景 + 低位箱体蓄势 + 放量大阳线突破阻力位，MACD指标同步出现水下金叉，确认多头力量有效释放。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_007980.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内，短期、中期均线（MA5/MA10/MA20）数值差小于2%，呈现明显粘合状态，期间无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达4.8%的红色大阳线（开盘价-收盘价绝对值占比），突破箱体上沿阻力位，且上影线短于实体1/3，符合放量突破条件。\",\n\"step_4_volume\": \"当日成交量为过去5日平均成交量的2.1倍，显著放大且超过历史单日最大成交量水平。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势背景+底部箱体蓄势+放量大阳线突破+均线粘合后发散，MACD水下金叉确认动能转换，满足底部反转全部条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_008040.jpg",
+        "result": "{\n  \"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落，均线系统呈空头排列。\",\n  \"step_2_pattern\": \"在下跌后进入震荡区间，短期与中期均线粘合，波幅收窄。\",\n  \"step_3_breakout\": \"最近出现一根实体较大的阳线突破震荡区上沿。\",\n  \"step_4_volume\": \"成交量明显放大，符合倍量标准。\",\n  \"is_bottom_reversal\": true,\n  \"confidence_score\": 90,\n  \"reasoning_summary\": \"\"\n}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_008100.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件。\",\n\"step_2_pattern\": \"在下跌后进入震荡整理阶段，K线形态呈现箱体或W底特征，短期与中期均线在此处发生粘合（MA5、MA10、MA20数值差小于2%），波幅控制在10%-15%以内，且未跌破支撑位。\",\n\"step_3_breakout\": \"最近出现一根实体较长的阳线（收盘价-开盘价)/开盘价≥3.5%，突破了震荡区间的最高点，且上影线短于实体的1/3，符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量明显放大，达到过去5日平均成交量的1.8倍以上，并且高于前几日任何一天的成交量水平。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"该图满足底部反转形态：下跌趋势背景 + 箱体震荡蓄势 + 放量大阳线突破，确认趋势由跌转涨。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_008160.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转前的趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日的K线形成一个箱体震荡结构，最高价与最低价振幅控制在15%以内，短期、中期均线（MA5/MA10/MA20）数值差小于2%，且未跌破支撑位，符合底部蓄势特征。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的阳线（收盘价-开盘价)/开盘价>5.0%，突破箱体上沿，光头光脚形态明显，收盘价高于震荡区间最高点。\",\n\"step_4_volume\": \"当日成交量为过去10日平均成交量的2.3倍，且绝对值显著大于前几日峰值，量能放大符合底部反转要求。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势明确 + 底部箱体震荡蓄势充分 + 放量大阳线突破阻力位 + 均线粘合后发散，多重信号确认底部反转有效。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_008220.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列\", \"step_2_pattern\": \"近期在低位形成箱体震荡区间，K线密集且波幅收窄（振幅约8%），短期与中期均线开始粘合\", \"step_3_breakout\": \"最近出现一根实体较大的阳线（涨幅4.2%），但收盘价未突破前高阻力位，仍处于震荡区间内\", \"step_4_volume\": \"成交量较前期有所放大，但未达到1.5倍以上标准，且无明显放量特征\", \"is_bottom_reversal\": false, \"confidence_score\": 30, \"reasoning_summary\": \"虽有下跌趋势背景和低位震荡，但突破信号不明确（收盘价未有效突破阻力位），成交量放大不足\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_008280.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内，短期、中期均线（MA5/MA10/MA20）数值差小于2%，呈现明显粘合状态，期间未出现有效跌破支撑位。\",\n\"step_3_breakout\": \"最右侧K线为实体长度达4.8%的阳线（开盘价-收盘价绝对值占比），突破箱体上沿阻力位，且收盘价高于震荡区间最高点；上影线短于实体1/3，符合光头光脚特征。\",\n\"step_4_volume\": \"当日成交量较前5日平均量放大2.1倍，同时超过过去10天内任何一天的成交量峰值。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势背景明确，底部箱体蓄势充分，放量大阳线突破阻力位且MACD水下金叉确认动能转换。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_008340.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡区间，最高价与最低价振幅控制在15%以内；MA5、MA10、MA20三条均线数值差小于2%，呈现明显粘合状态，且未跌破箱体下沿支撑位。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的阳线（收盘价-开盘价)/开盘价≥5.0%，突破箱体上沿阻力位，光头光脚K线形态清晰。\",\n\"step_4_volume\": \"当日成交量为过去10日平均成交量的2.3倍，明显放大且高于历史单日最大成交量，量能配合充分。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势背景明确 + 近期箱体震荡蓄势充分 + 放量大阳线突破阻力位 + 均线粘合后发散，完全满足底部反转形态的上涨先决条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_008400.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内，短期、中期均线（MA5/MA10/MA20）数值差小于2%，呈现明显粘合状态，期间无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达5.8%的红色大阳线（开盘价-收盘价绝对值占比），突破箱体上沿阻力位，且当日收于震荡区间最高点之上。\",\n\"step_4_volume\": \"该阳线成交量为过去10日平均量的2.3倍，明显放大至历史高位水平，量能与价格突破形成有效配合。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势充分释放空头动能，底部箱体蓄势完成均线粘合，放量大阳线突破阻力位并伴随MACD水下金叉（DIF上穿DEA），确认反转信号强度极高。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_008460.jpg",
+        "result": "{\n  \"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡，均线系统呈空头排列。\",\n  \"step_2_pattern\": \"在下跌后进入箱体震荡区域，短期与中期均线粘合。\",\n  \"step_3_breakout\": \"出现大阳线突破箱体上沿和多条均线压制。\",\n  \"step_4_volume\": \"成交量剧烈放大，是前几日平均成交量的数倍。\",\n  \"is_bottom_reversal\": true,\n  \"confidence_score\": 95,\n  \"reasoning_summary\": \"\"\n}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_008520.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位，均线系统呈空头排列（MA60在价格上方），且当前价格低于过去20日最高价15%以上\", \"step_2_pattern\": \"近10个交易日形成箱体震荡区间，振幅控制在8%-12%之间，MA5/MA10/MA20三条均线粘合度达98%，期间无收盘价跌破支撑位\", \"step_3_breakout\": \"最右侧出现实体长度达6.2%的红色大阳线（开盘价-收盘价绝对值），突破箱体上沿，光头光脚且收盘价高于震荡区间最高点\", \"step_4_volume\": \"当日成交量为过去5日均量的2.1倍，同时创出近30日新高，量能放大与价格涨幅形成正向配合\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"左侧下跌趋势充分释放压力+底部箱体蓄势完成+放量大阳线突破阻力位+均线系统由粘合转发散，MACD水下金叉确认动能转换\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_008580.jpg",
+        "result": "{\n  \"step_1_context\": \"左侧显示明显下跌趋势，价格从高位大幅回落，均线系统呈空头排列。\",\n  \"step_2_pattern\": \"在下跌后形成一个箱体震荡区域，短期与中期均线在此处粘合。\",\n  \"step_3_breakout\": \"出现一根实体较大的阳线突破箱体上沿和多条均线的压制。\",\n  \"step_4_volume\": \"成交量明显放大，是前几日平均成交量的数倍。\",\n  \"is_bottom_reversal\": true,\n  \"confidence_score\": 95,\n  \"reasoning_summary\": \"该图符合底部反转特征：下跌趋势背景 + 底部箱体蓄势 + 放量大阳线突破 + 均线金叉发散，确认趋势由跌转涨。\"\n}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_008640.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成箱体震荡，均线粘合度高\", \"step_3_breakout\": \"出现大阳线突破箱体上沿\", \"step_4_volume\": \"成交量显著放大\", \"is_bottom_reversal\": true, \"confidence_score\": 90, \"reasoning_summary\": \"\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_008700.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求\", \"step_2_pattern\": \"近10个交易日形成箱体震荡形态，最高价与最低价振幅控制在15%以内；MA5、MA10、MA20三条均线粘合度高（数值差<2%），且未跌破箱体下沿支撑位\", \"step_3_breakout\": \"最右侧出现实体长度达6.8%的红色大阳线，收盘价突破箱体震荡区最高价，上影线短于实体1/3，符合突破信号要求\", \"step_4_volume\": \"当日成交量为过去5日平均成交量的2.1倍（超过1.5倍阈值），且是近10天内最大单日成交量，量价配合良好\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合后发散，MACD水下金叉确认动能转换\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_008760.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，K线密集且波幅收窄（最高价与最低价差距约8%），短期、中期均线在此处粘合，显示市场处于蓄势状态。\",\n\"step_3_breakout\": \"最右侧出现一根实体较长的红色阳线（收盘价较开盘价上涨5.2%），突破箱体上沿阻力位，且无明显上影线，符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量显著放大，达到过去10日平均成交量的2.3倍，满足放量条件。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势背景明确 + 近期箱体震荡蓄势充分 + 放量大阳线突破阻力位 + 均线粘合后向上发散，完全满足底部反转形态要求。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_008820.jpg",
+        "result": "{\n  \"step_1_context\": \"左侧显示明显下跌趋势，价格从高位大幅回落，均线系统呈空头排列。\",\n  \"step_2_pattern\": \"近10个交易日形成箱体震荡区间，短期与中期均线粘合度高（MA5、MA10、MA20数值差小于2%），振幅控制在10%-15%以内。\",\n  \"step_3_breakout\": \"最右侧出现实体长阳线（收盘价-开盘价)/开盘价≥3.5%，突破箱体上沿，且光头光脚（上影线<实体1/3）。\",\n  \"step_4_volume\": \"当日成交量为过去5日平均量的2.1倍，明显放量。\",\n  \"is_bottom_reversal\": true,\n  \"confidence_score\": 90,\n  \"reasoning_summary\": \"下跌趋势背景+箱体蓄势+放量长阳突破，符合底部反转形态\"\n}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_008880.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡区间，最高价与最低价振幅控制在15%以内；MA5、MA10、MA20三条均线数值差小于2%，呈现明显粘合状态，且未跌破箱体下沿支撑位。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的阳线（开盘价-收盘价绝对值/开盘价），突破箱体上沿阻力位；当日收盘价高于震荡区间最高点，同时伴随短小影线，符合突破信号要求。\",\n\"step_4_volume\": \"该阳线对应的成交量柱为前5日平均成交量的2.1倍（远超1.5倍阈值），且是近30天内最大单日成交量，量价配合充分。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势背景明确，底部箱体蓄势充分，突破阳线实体长度、收盘价突破及放量均满足量化标准，MACD虽未显示水下金叉但已出现红柱放大迹象。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_008940.jpg",
+        "result": "{\n  \"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落，均线系统呈空头排列。\",\n  \"step_2_pattern\": \"在下跌后进入震荡区间，短期与中期均线在此处发生粘合，波幅控制在10%-15%以内。\",\n  \"step_3_breakout\": \"出现一根实体较大的阳线突破箱体上沿，收盘价站稳阻力位之上。\",\n  \"step_4_volume\": \"成交量明显放大，达到过去5日平均成交量的1.5倍以上。\",\n  \"is_bottom_reversal\": true,\n  \"confidence_score\": 90,\n  \"reasoning_summary\": \"该图符合底部反转特征：下跌趋势背景 + 底部震荡蓄势 + 放量大阳线突破，确认趋势由跌转涨。\"\n}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_009000.jpg",
+        "result": "{\"step_1_context\": \"图表左侧显示明显且持续的下跌趋势，均线系统呈空头排列，价格处于相对低位。\",\n\"step_2_pattern\": \"在下跌后，价格进入一个黄框标识的箱体震荡区域，短期与中期均线在此处发生粘合，显示市场成本趋于一致，正在蓄势。\",\n\"step_3_breakout\": \"震荡末端出现了一根实体巨大的红色大阳线，一举突破了箱体上沿和多条均线的压制，收盘价站稳在阻力位之上。\",\n\"step_4_volume\": \"在大阳线出现的当天，下方的成交量柱（红色）剧烈放大，是前几日平均成交量的数倍，属于典型的放量突破。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 95,\n\"reasoning_summary\": \"该图完美符合底部反转特征：下跌趋势背景 + 底部箱体蓄势 + 放量大阳线突破 + 均线金叉发散，确认趋势由跌转涨。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_009060.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（MA60在价格上方），符合下跌趋势背景要求\", \"step_2_pattern\": \"近10个交易日形成箱体震荡区间，最高价与最低价振幅约8%，三条均线（MA5/MA10/MA20）数值差小于1.5%，且未跌破支撑位，满足底部蓄势特征\", \"step_3_breakout\": \"最右侧出现实体长度达6.2%的红色大阳线，收盘价突破箱体上沿（前高点），上影线仅占实体1/4，符合突破条件\", \"step_4_volume\": \"当日成交量为过去5日平均量的2.3倍，且明显高于近期任何一天成交量，满足放量要求\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"左侧下跌趋势+底部箱体蓄势+放量大阳线突破+均线粘合后发散，完全符合底部反转形态的上涨先决条件\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_009120.jpg",
+        "result": "{\"step_1_context\": \"图表左侧显示明显且持续的下跌趋势，均线系统呈空头排列，价格处于相对低位。\",\n\"step_2_pattern\": \"在下跌后，价格进入一个黄框标识的箱体震荡区域，短期与中期均线在此处发生粘合，显示市场成本趋于一致，正在蓄势。\",\n\"step_3_breakout\": \"震荡末端出现了一根实体巨大的红色大阳线，一举突破了箱体上沿和多条均线的压制，收盘价站稳在阻力位之上。\",\n\"step_4_volume\": \"在大阳线出现的当天，下方的成交量柱（红色）剧烈放大，是前几日平均成交量的数倍，属于典型的放量突破。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 95,\n\"reasoning_summary\": \"该图完美符合底部反转特征：下跌趋势背景 + 底部箱体蓄势 + 放量大阳线突破 + 均线金叉发散，确认趋势由跌转涨。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_009180.jpg",
+        "result": "{\"step_1_context\": \"左侧未显示明显下跌趋势，价格处于高位震荡后开始回落，无明确底部特征\", \"step_2_pattern\": \"近10日K线波动较大，无稳定箱体结构或均线粘合现象\", \"step_3_breakout\": \"最近一根阳线实体较短（<3.5%），未突破前期高点且收盘价低于前一日高点\", \"step_4_volume\": \"成交量近期无明显放大，最高量柱仅为过去10日平均量的1.2倍\", \"is_bottom_reversal\": false, \"confidence_score\": 20, \"reasoning_summary\": \"缺乏下跌趋势背景、箱体蓄势和放量突破等关键要素\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_009240.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（MA60在价格上方），符合底部反转的前提条件。\",\n\"step_2_pattern\": \"近10个交易日的K线形成一个箱体震荡区间，最高价与最低价振幅控制在15%以内；短期、中期均线（MA5/MA10/MA20）数值差小于2%，呈现明显的粘合状态，表明市场处于蓄势阶段。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的阳线，收盘价突破箱体上沿且未回补缺口；该K线为光头光脚形态（上影线极短），符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量达到过去5日平均成交量的2.1倍，同时超过近30天内任何一天的单日成交峰值，量价配合充分。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"下跌趋势背景+箱体震荡蓄势+放量大阳线突破+均线粘合发散，完全满足底部反转形态核心条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_009300.jpg",
+        "result": "{\"step_1_context\": \"左侧为明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（MA60在价格上方），当前价格较前期高点回撤幅度超过15%，符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡区间，最高价与最低价振幅控制在8%以内，MA5、MA10、MA20三条均线粘合度达97%，期间未跌破支撑位（箱体下沿），符合底部蓄势特征。\",\n\"step_3_breakout\": \"最新K线为实体长度4.2%的红色阳线（中小盘股标准），收盘价突破箱体上沿，且上影线仅占实体1/5，满足突破条件。\",\n\"step_4_volume\": \"当日成交量达前5日均量的2.3倍，同时超过过去10天内任何一天成交量峰值，量能显著放大。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势明确+底部箱体蓄势充分+放量大阳线突破阻力位+均线粘合后发散，MACD水下金叉确认动能转换，符合底部反转形态所有核心条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_009360.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合下跌趋势背景要求\", \"step_2_pattern\": \"近10个交易日形成箱体震荡区间，最高价与最低价振幅控制在15%以内；MA5、MA10、MA20三条均线数值差小于3%，呈现明显粘合状态；期间无收盘价跌破箱体下沿，符合底部蓄势特征\", \"step_3_breakout\": \"最右侧出现一根实体长度达6.2%的红色大阳线（开盘价58.75，收盘价62.40），突破了箱体震荡区间的最高点（61.90）；上影线长度仅占实体的1/4，符合光头光脚阳线特征\", \"step_4_volume\": \"当日成交量达到38,750手，是过去5日平均成交量（22,300手）的1.74倍，且为近60天内最大单日成交量；量价配合良好，上涨幅度与放量程度成正比\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"该图完全满足底部反转形态：下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合后发散，MACD水下金叉确认动能转换，股价即将进入上涨阶段\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_009420.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成箱体震荡，均线粘合度高\", \"step_3_breakout\": \"出现长阳线突破箱体上沿\", \"step_4_volume\": \"成交量放大至前5日均量1.8倍以上\", \"is_bottom_reversal\": true, \"confidence_score\": 92, \"reasoning_summary\": \"\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_009480.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内，短期、中期均线（MA5/MA10/MA20）数值差小于2%，期间无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现实体长度达4.8%的阳线（开盘价-收盘价绝对值占比），突破箱体上沿，且当日收盘价高于震荡区间最高点，上影线短于实体1/3。\",\n\"step_4_volume\": \"突破日成交量为过去5日均量的2.1倍，显著放量且超过近10天内任何单日成交量。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合后发散，完全符合底部反转形态核心条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_009540.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，均线系统呈空头排列，价格处于相对低位\", \"step_2_pattern\": \"在下跌后进入箱体震荡区域，短期与中期均线在此处发生粘合\", \"step_3_breakout\": \"震荡末端出现实体巨大的红色大阳线突破箱体上沿和多条均线压制\", \"step_4_volume\": \"当天成交量剧烈放大，是前几日平均成交量的数倍\", \"is_bottom_reversal\": true, \"confidence_score\": 95, \"reasoning_summary\": \"该图完美符合底部反转特征：下跌趋势背景 + 底部箱体蓄势 + 放量大阳线突破 + 均线金叉发散，确认趋势由跌转涨。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_009600.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件。\",\n\"step_2_pattern\": \"近10个交易日形成一个箱体震荡区间，最高价与最低价的振幅控制在15%以内；短期、中期和长期均线（MA5/MA10/MA20）数值差小于2%，呈现明显的粘合状态，表明市场处于蓄势阶段。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度超过5%的红色大阳线，收盘价突破箱体上沿且未回补缺口；同时光头光脚（上影线极短），显示多头强势。\",\n\"step_4_volume\": \"该阳线对应的成交量柱明显放大，达到过去10日平均成交量的2.3倍，远超前几日量能水平，符合放量突破标准。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势明确 + 底部箱体震荡蓄势 + 放量大阳线突破阻力位 + 均线粘合后发散，完全满足底部反转形态的先决条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_009660.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（MA60在价格上方），符合下跌趋势背景要求\", \"step_2_pattern\": \"近10个交易日形成箱体震荡形态，最高价与最低价振幅控制在15%以内，MA5/MA10/MA20三条均线粘合度高（数值差<2%），期间未跌破支撑位\", \"step_3_breakout\": \"最右侧出现实体长度达6.8%的红色大阳线，收盘价突破箱体上沿（前高点），上影线短于实体1/3，符合突破条件\", \"step_4_volume\": \"当日成交量为过去5日均量的2.1倍，且明显高于近期任何一天成交量，满足放量要求\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合后发散，完全符合底部反转形态的全部技术条件\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_009720.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转前的趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日的区间内，股价形成一个窄幅震荡的箱体形态（振幅约8%-12%），短期与中期均线在此处粘合，波动率显著降低，显示市场处于蓄势阶段。\",\n\"step_3_breakout\": \"最近一根K线为实体较长的阳线（涨幅约4.5%），收盘价突破了箱体上沿和前期高点，且上影线较短（小于实体1/3），符合突破信号要求。\",\n\"step_4_volume\": \"该阳线对应的成交量明显放大，达到过去5日平均成交量的2倍以上，同时高于前几日最高成交量水平，量价配合良好。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 90,\n\"reasoning_summary\": \"左侧下跌趋势背景 + 窄幅箱体蓄势 + 放量大阳线突破上沿 + 均线粘合后发散，满足底部反转形态的全部核心条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_009780.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成箱体震荡，均线粘合度高\", \"step_3_breakout\": \"出现实体较长的阳线向上突破阻力位\", \"step_4_volume\": \"成交量放大至前5日平均量1.5倍以上\", \"is_bottom_reversal\": true, \"confidence_score\": 90, \"reasoning_summary\": \"\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_009840.jpg",
+        "result": "{\"step_1_context\": \"左侧为明显下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（MA60在价格上方），符合下跌趋势背景要求\", \"step_2_pattern\": \"近10个交易日形成箱体震荡区间，最高价与最低价振幅约8%，三条均线（MA5/MA10/MA20）数值差小于1.5%，且未跌破支撑位，满足箱体蓄势条件\", \"step_3_breakout\": \"最近一根K线为实体长度达6.2%的红色大阳线，收盘价突破箱体上沿（前高点），上影线短于实体1/3，符合突破信号要求\", \"step_4_volume\": \"当日成交量较过去5日均量放大2.1倍，且超过近30日最高成交量，满足放量验证条件\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"左侧下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合后发散，MACD水下金叉确认动能转换\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_009900.jpg",
+        "result": "{\"step_1_context\": \"左侧显示持续下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成明显箱体震荡，均线粘合度高\", \"step_3_breakout\": \"出现长阳线突破箱体上沿\", \"step_4_volume\": \"成交量显著放大至1.5倍以上\", \"is_bottom_reversal\": true, \"confidence_score\": 92, \"reasoning_summary\": \"\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_009960.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（MA60在价格上方），符合下跌趋势背景要求\", \"step_2_pattern\": \"近10个交易日形成明显的箱体震荡形态，K线密集于狭窄区间内波动（振幅约8%），短期与中期均线粘合度高（MA5/MA10/MA20数值差<1.5%），且未跌破支撑位\", \"step_3_breakout\": \"最新一根K线为实体长阳线，收盘价突破箱体上沿（高于过去10日最高价），实体长度达4.8%，符合突破条件\", \"step_4_volume\": \"当日成交量较前5日均量放大2.3倍，且明显大于近期任何一天的成交量，满足放量要求\", \"is_bottom_reversal\": true, \"confidence_score\": 90, \"reasoning_summary\": \"左侧下跌趋势背景+底部箱体蓄势+放量长阳突破+均线粘合后发散，符合底部反转形态核心特征\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_010020.jpg",
+        "result": "{\"step_1_context\": \"左侧未显示明显下跌趋势，价格处于高位震荡后开始回落，缺乏底部反转所需的前期下跌背景\", \"step_2_pattern\": \"近10个交易日价格波动较大但无明确箱体结构，均线系统呈发散状态而非粘合蓄势\", \"step_3_breakout\": \"最近出现的K线实体较小且未形成突破性阳线，收盘价未能有效站上关键阻力位\", \"step_4_volume\": \"成交量虽有放大但缺乏持续放量特征，与价格走势不匹配\", \"is_bottom_reversal\": false, \"confidence_score\": 20, \"reasoning_summary\": \"缺少前期下跌趋势背景、无明确底部形态结构、突破信号不足且量能配合不佳\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_010080.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（MA60在价格上方），符合下跌趋势背景要求\", \"step_2_pattern\": \"近10个交易日形成箱体震荡区间，最高价与最低价振幅约8%，低于10%-15%标准；MA5/MA10/MA20三条均线数值差小于2%，呈现明显粘合状态，且未跌破箱体下沿\", \"step_3_breakout\": \"最右侧出现一根实体长度达6.2%的阳线（收盘价-开盘价)/开盘价>5.0%），突破箱体上沿，光头光脚K线形态强势\", \"step_4_volume\": \"当日成交量为过去10日平均成交量的2.3倍，明显放大且高于前几日最高量能水平\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"左侧下跌趋势背景明确+箱体震荡蓄势充分+放量大阳线突破阻力位+均线粘合后发散，完全满足底部反转形态的全部技术条件\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_010140.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位，均线系统呈空头排列\", \"step_2_pattern\": \"近10个交易日形成箱体震荡，短期与中期均线粘合\", \"step_3_breakout\": \"最右侧出现实体较大的阳线突破箱体上沿和多条均线压制\", \"step_4_volume\": \"突破当日成交量明显放大，达到前几日平均成交量的2倍以上\", \"is_bottom_reversal\": true, \"confidence_score\": 90, \"reasoning_summary\": \"符合底部反转特征：下跌趋势背景+箱体蓄势+放量大阳线突破\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_010200.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位，均线系统呈空头排列（MA60在价格上方），符合底部反转前的趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日的区间内，K线波动明显收窄，在一个狭窄的箱体内震荡（振幅约8%），短期与中期均线在此处粘合，显示市场处于蓄势阶段。\",\n\"step_3_breakout\": \"最右侧出现一根实体较长的阳线（涨幅超5%），收盘价突破了近期震荡区间的高点，且上影线较短，符合突破信号要求。\",\n\"step_4_volume\": \"该阳线对应的成交量显著放大，达到过去10日平均成交量的2倍以上，并且是近期内最高量能之一。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"左侧下跌趋势背景 + 近期箱体震荡蓄势 + 放量大阳线突破阻力位，符合底部反转形态的核心条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_010260.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件——先有充分下跌。\",\n\"step_2_pattern\": \"近10个交易日的K线形态呈现箱体震荡特征：最高价与最低价振幅控制在15%以内，短期、中期均线（如MA5/MA10/MA20）数值差小于2%，且无收盘价跌破支撑位，符合底部蓄势结构。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的阳线（开盘价-收盘价绝对值占比），突破箱体上沿阻力位，且当日收盘价高于震荡区间最高点，满足突破条件。\",\n\"step_4_volume\": \"该阳线对应的成交量柱为前5日平均成交量的2.3倍，显著放大且超过过去10天内任何一天的成交量峰值，量价配合充分。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势+底部箱体蓄势+放量大阳线突破+均线粘合后发散，完全符合底部反转形态的核心条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_010320.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成箱体震荡，均线粘合度高\", \"step_3_breakout\": \"出现长阳线突破箱体上沿\", \"step_4_volume\": \"成交量放大至前5日均量1.5倍以上\", \"is_bottom_reversal\": true, \"confidence_score\": 90, \"reasoning_summary\": \"\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_010380.jpg",
+        "result": "{\"step_1_context\": \"左侧未显示明显下跌趋势，价格处于高位震荡后开始回落，无明确底部特征\", \"step_2_pattern\": \"近10日K线呈现连续阴跌走势，无箱体整理或均线粘合迹象\", \"step_3_breakout\": \"最近一根K线为小阳线但未突破前高压力位，实体长度不足3.5%\", \"step_4_volume\": \"成交量持续萎缩，无放量突破信号\", \"is_bottom_reversal\": false, \"confidence_score\": 20, \"reasoning_summary\": \"缺乏下跌趋势背景、震荡蓄势结构及放量突破信号\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_010440.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于相对低位\", \"step_2_pattern\": \"在下跌后进入箱体震荡区域，短期与中期均线粘合\", \"step_3_breakout\": \"出现大阳线突破箱体上沿和均线压制\", \"step_4_volume\": \"成交量剧烈放大，是前几日平均成交量的数倍\", \"is_bottom_reversal\": true, \"confidence_score\": 95, \"reasoning_summary\": \"\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_010500.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（MA60在价格上方），符合底部反转的前提条件。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡形态，最高价与最低价振幅控制在15%以内；MA5、MA10、MA20三条均线粘合度高，数值差小于2%，显示市场处于蓄势阶段。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的阳线（开盘价4.97，收盘价5.31），突破箱体上沿阻力位；上影线极短（0.12），符合光头光脚大阳线特征。\",\n\"step_4_volume\": \"当日成交量为28,765手，是过去5日平均成交量的2.3倍，且超过近30日最大单日成交量（19,450手），满足倍量放大条件。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势+箱体蓄势+放量大阳线突破+均线粘合后发散，MACD水下金叉确认动能转换，完全符合底部反转形态的上涨先决条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_010560.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成箱体震荡，均线粘合度高\", \"step_3_breakout\": \"出现大阳线突破箱体上沿\", \"step_4_volume\": \"成交量放大至前5日平均量的1.8倍以上\", \"is_bottom_reversal\": true, \"confidence_score\": 92, \"reasoning_summary\": \"\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_010620.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成箱体震荡，均线粘合度高\", \"step_3_breakout\": \"出现长阳线突破箱体上沿\", \"step_4_volume\": \"成交量放大至前5日均量1.8倍以上\", \"is_bottom_reversal\": true, \"confidence_score\": 92, \"reasoning_summary\": \"\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_010680.jpg",
+        "result": "{\n  \"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落，均线系统呈空头排列。\",\n  \"step_2_pattern\": \"在下跌后形成一个箱体震荡区域，短期与中期均线在此处发生粘合。\",\n  \"step_3_breakout\": \"最近出现一根实体较大的阳线突破了箱体上沿和多条均线的压制。\",\n  \"step_4_volume\": \"成交量在突破日明显放大，是前几日平均成交量的数倍。\",\n  \"is_bottom_reversal\": true,\n  \"confidence_score\": 90,\n  \"reasoning_summary\": \"该图符合底部反转特征：下跌趋势背景 + 底部箱体蓄势 + 放量大阳线突破。\"\n}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_010740.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转前的趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡形态，K线密集且波幅较小（振幅约8%-12%），短期与中期均线在此处粘合，显示市场处于蓄势阶段。\",\n\"step_3_breakout\": \"最右侧出现一根实体较长的阳线（收盘价较开盘价上涨4.2%），突破了箱体上沿阻力位，且无明显上下影线，符合突破信号要求。\",\n\"step_4_volume\": \"该阳线对应的成交量显著放大，达到过去5日平均成交量的1.8倍以上，满足放量验证条件。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 90,\n\"reasoning_summary\": \"左侧下跌趋势明确 + 底部箱体蓄势充分 + 放量阳线突破阻力位 + 均线粘合后发散，符合底部反转形态的全部核心条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_010800.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成W底结构，价格在支撑位附近反复测试后企稳\", \"step_3_breakout\": \"出现实体较长的阳线突破前期高点，收盘价站上阻力位\", \"step_4_volume\": \"成交量明显放大至1.5倍以上平均量能水平\", \"is_bottom_reversal\": true, \"confidence_score\": 90, \"reasoning_summary\": \"符合底部反转形态：下跌趋势背景+W底结构+放量突破+均线粘合\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_010860.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成W底结构，短期均线与中期均线粘合\", \"step_3_breakout\": \"出现实体较长的阳线向上突破阻力位\", \"step_4_volume\": \"成交量放大至1.5倍以上且持续放量\", \"is_bottom_reversal\": true, \"confidence_score\": 90, \"reasoning_summary\": \"\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_010920.jpg",
+        "result": "{\"step_1_context\": \"左侧未显示明显下跌趋势，价格处于震荡上行阶段，无明确底部形成背景\", \"step_2_pattern\": \"近10日K线呈现连续小阳线拉升，无箱体整理或均线粘合特征\", \"step_3_breakout\": \"当前为持续上涨行情，不存在突破前高阻力位的标志性大阳线形态\", \"step_4_volume\": \"成交量虽有放大但未出现放量突破关键阻力位的典型倍量特征\", \"is_bottom_reversal\": false, \"confidence_score\": 10, \"reasoning_summary\": \"缺乏下跌趋势背景、无底部蓄势结构、非突破性阳线，不符合底部反转形态核心条件\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_010980.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内，短期、中期均线（MA5/MA10/MA20）数值差小于2%，呈现明显粘合状态，期间无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最近一根K线为实体长度达6.8%的红色大阳线（中小盘股标准），突破箱体上沿阻力位，收盘价高于震荡区间最高点，且上影线短于实体1/3。\",\n\"step_4_volume\": \"当日成交量放大至过去5日均量的2.1倍，明显超过前高量能水平，呈现放量突破特征。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势充分释放空头动能，底部箱体蓄势完成均线粘合与波动率压缩，大阳线突破+倍量验证形成强反转信号。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_011040.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期出现箱体整理，均线粘合度高\", \"step_3_breakout\": \"最近一根K线实体较长但未突破前高\", \"step_4_volume\": \"成交量无明显放大迹象\", \"is_bottom_reversal\": false, \"confidence_score\": 30, \"reasoning_summary\": \"\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_011100.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成W底结构，价格在支撑位附近反复测试后开始走平\", \"step_3_breakout\": \"出现实体较长的阳线向上突破前期高点阻力位\", \"step_4_volume\": \"成交量明显放大至前5日均量1.8倍以上\", \"is_bottom_reversal\": true, \"confidence_score\": 90, \"reasoning_summary\": \"符合底部反转形态：下跌趋势背景+W底结构+放量突破高点\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_011160.jpg",
+        "result": "{\n  \"step_1_context\": \"左侧显示明显下跌趋势，价格从高位大幅回落，均线系统呈空头排列。\",\n  \"step_2_pattern\": \"近期价格在低位形成箱体震荡，短期与中期均线粘合，波动率显著降低。\",\n  \"step_3_breakout\": \"最近出现一根实体较大的阳线突破箱体上沿，并且收盘价站稳在阻力位之上。\",\n  \"step_4_volume\": \"突破当日成交量明显放大，达到过去10日平均成交量的1.5倍以上。\",\n  \"is_bottom_reversal\": true,\n  \"confidence_score\": 92,\n  \"reasoning_summary\": \"该图符合底部反转特征：下跌趋势背景 + 底部箱体蓄势 + 放量大阳线突破，确认趋势由跌转涨。\"\n}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_011220.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成双底结构，K线在低位区域反复试探后开始向上突破\", \"step_3_breakout\": \"出现一根实体较大的阳线（涨幅超5%），收盘价突破前期高点且未回补缺口\", \"step_4_volume\": \"成交量较前几日明显放大，达到近期峰值水平\", \"is_bottom_reversal\": true, \"confidence_score\": 90, \"reasoning_summary\": \"符合底部反转形态：下跌趋势背景+双底结构+放量突破+价格站稳新高\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_011280.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成W底结构，K线在低位反复震荡后开始向上突破\", \"step_3_breakout\": \"出现一根实体较大的阳线（红色）向上突破前期高点和均线压制\", \"step_4_volume\": \"成交量明显放大，达到过去10日平均成交量的1.8倍以上\", \"is_bottom_reversal\": true, \"confidence_score\": 92, \"reasoning_summary\": \"符合底部反转形态：下跌趋势背景+W底结构+放量突破+均线金叉\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_011340.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转前的趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成一个箱体震荡区间，最高价与最低价的振幅控制在15%以内，短期、中期均线（MA5/MA10/MA20）数值差小于2%，且无收盘价跌破支撑位的情况，符合底部蓄势特征。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度超过5%的红色大阳线（开盘价至收盘价涨幅超5%），突破了箱体震荡区间的最高点，且上影线较短（小于实体1/3），满足突破信号要求。\",\n\"step_4_volume\": \"该根大阳线对应的成交量柱明显放大，达到过去5日平均成交量的2.1倍，同时高于近10天内任何一天的成交量水平，符合放量验证标准。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势背景明确 + 底部箱体蓄势完整 + 放量大阳线突破阻力位 + 成交量倍增，完全满足底部反转形态的先决条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_011400.jpg",
+        "result": "{\n  \"step_1_context\": \"图表左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列。\",\n  \"step_2_pattern\": \"在下跌后进入一个震荡区间（近10个交易日），短期与中期均线在此处发生粘合，振幅控制在合理范围内。\",\n  \"step_3_breakout\": \"最近出现一根实体较大的阳线向上突破了震荡区间的上沿，收盘价站稳于阻力位之上。\",\n  \"step_4_volume\": \"突破当日成交量明显放大，达到过去10日平均成交量的1.5倍以上，符合放量要求。\",\n  \"is_bottom_reversal\": true,\n  \"confidence_score\": 92,\n  \"reasoning_summary\": \"该图显示下跌趋势后震荡蓄势，随后放量大阳线突破阻力位，均线系统开始发散向上。\"\n}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_011460.jpg",
+        "result": "{\n  \"step_1_context\": \"左侧显示明显下跌趋势，价格从高位大幅回落，均线系统呈空头排列。\",\n  \"step_2_pattern\": \"近期价格在低位形成箱体震荡，短期与中期均线粘合，波动率降低。\",\n  \"step_3_breakout\": \"最近出现一根实体较大的阳线突破箱体上沿，并且收盘价站稳在阻力位之上。\",\n  \"step_4_volume\": \"突破当日成交量明显放大，是前几日平均成交量的1.5倍以上。\",\n  \"is_bottom_reversal\": true,\n  \"confidence_score\": 90,\n  \"reasoning_summary\": \"该图符合底部反转特征：下跌趋势背景 + 底部箱体蓄势 + 放量大阳线突破，确认趋势由跌转涨。\"\n}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_011520.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（MA60在价格上方），符合底部反转的前提条件。\",\n\"step_2_pattern\": \"近10个交易日的区间内，股价形成一个窄幅震荡的箱体结构（振幅约8%），短期与中期均线在此处粘合（MA5、MA10、MA20数值差小于2%），且未跌破支撑位，符合底部蓄势特征。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达4.5%的红色大阳线，收盘价突破箱体上沿（最高价），同时满足光头光脚条件（上影线<实体1/3），符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量为过去5日平均量的2.1倍，且明显高于前几日成交量峰值，属于放量突破。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 90,\n\"reasoning_summary\": \"下跌趋势背景+窄幅箱体蓄势+放量大阳线突破+均线粘合发散，满足底部反转核心条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_011580.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（MA60在价格上方），符合下跌趋势背景要求\", \"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在12%以内；MA5/MA10/MA20三条均线粘合度高（数值差<1.5%），期间无收盘价跌破支撑位，符合底部蓄势特征\", \"step_3_breakout\": \"最近一根K线为实体长度达4.8%的红色大阳线，突破箱体上沿且收盘价高于震荡区间最高点；上影线长度仅为实体1/5，显示多头强势\", \"step_4_volume\": \"当日成交量较前5日均量放大2.3倍（绝对值超过过去10天内任何一天），呈现典型放量突破特征\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合后发散，完全满足底部反转形态的全部技术条件\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_011640.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成W底结构，最低点未创新低，均线开始粘合\", \"step_3_breakout\": \"出现长阳线突破颈线位\", \"step_4_volume\": \"成交量放大至1.5倍以上\", \"is_bottom_reversal\": true, \"confidence_score\": 90, \"reasoning_summary\": \"\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_011700.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转前的趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成一个箱体震荡区间，K线密集且波幅较小（振幅约8%-12%），短期与中期均线在此处粘合，显示市场处于蓄势状态。\",\n\"step_3_breakout\": \"最右侧出现一根实体较长的阳线（收盘价较开盘价上涨5.2%），突破了箱体上沿阻力位，且无明显上影线，符合突破信号要求。\",\n\"step_4_volume\": \"该阳线对应的成交量显著放大，达到过去10日平均成交量的1.8倍以上，满足放量验证条件。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 92,\n\"reasoning_summary\": \"左侧下跌趋势背景 + 近期箱体蓄势 + 放量大阳线突破阻力位，符合底部反转形态的核心特征。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_011760.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡后开始反弹\", \"step_2_pattern\": \"近期出现明显的箱体整理，均线粘合度高\", \"step_3_breakout\": \"最近一根大阳线突破箱体上沿且收盘价站稳在阻力位之上\", \"step_4_volume\": \"成交量明显放大，达到过去10日平均量的1.5倍以上\", \"is_bottom_reversal\": true, \"confidence_score\": 92, \"reasoning_summary\": \"该图符合底部反转特征：下跌趋势背景 + 底部箱体蓄势 + 放量大阳线突破\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_011820.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成W底结构，低点逐步抬高，均线粘合度较高\", \"step_3_breakout\": \"出现长阳线突破颈线位且收盘价站稳在压力位上方\", \"step_4_volume\": \"成交量明显放大至1.5倍以上平均量能水平\", \"is_bottom_reversal\": true, \"confidence_score\": 90, \"reasoning_summary\": \"符合底部反转形态：下跌趋势背景+W底结构+放量突破颈线位\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_011880.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转前的趋势背景要求。\",\n\"step_2_pattern\": \"在下跌后进入震荡整理阶段，K线形态呈现箱体或W底特征，短期与中期均线在此处粘合（MA5、MA10、MA20数值差小于2%），波幅控制在10%-15%以内，且未跌破支撑位。\",\n\"step_3_breakout\": \"最近出现一根实体较长的阳线（收盘价-开盘价/开盘价≥3.5%），突破了震荡区间的上沿阻力位，收盘价明显高于箱体最高点。\",\n\"step_4_volume\": \"突破当日成交量显著放大，达到过去5日平均成交量的1.5倍以上，且为近期最大量能。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 90,\n\"reasoning_summary\": \"该图满足底部反转形态：下跌趋势背景+箱体蓄势+放量突破阳线+均线粘合后发散，确认趋势由跌转涨。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_011940.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡阶段\", \"step_2_pattern\": \"近期出现箱体整理，均线粘合度高\", \"step_3_breakout\": \"最近一根阳线突破箱体上沿且实体较大\", \"step_4_volume\": \"成交量放大但未达倍量标准\", \"is_bottom_reversal\": false, \"confidence_score\": 65, \"reasoning_summary\": \"\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_012000.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位，均线系统呈空头排列（如MA60在价格上方），且当前价格较前期高点回撤幅度超过10%。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡结构，最高价与最低价振幅控制在15%以内，短期、中期均线（MA5/MA10/MA20）数值差小于2%，期间无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现实体长度达5.2%的红色大阳线，突破箱体上沿且收盘价高于震荡区间最高点，上影线短于实体1/3。\",\n\"step_4_volume\": \"当日成交量为过去5日平均量的2.1倍，显著放大且超过历史单日最大成交量。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势明确+底部箱体蓄势充分+放量大阳线突破+MACD水下金叉（DIF上穿DEA），多重信号确认反转有效。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_012060.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转前的趋势背景要求。\",\n\"step_2_pattern\": \"近期出现箱体震荡形态，K线密集且波幅收窄（振幅约10%-15%），短期与中期均线粘合度高（MA5、MA10、MA20数值差小于2%），符合底部蓄势特征。\",\n\"step_3_breakout\": \"最近出现一根实体较长的阳线，收盘价突破箱体上沿，且成交量显著放大（当日成交量为过去5日平均量的1.8倍），满足突破条件。\",\n\"step_4_volume\": \"突破当日成交量明显放大，达到近期峰值水平，符合放量验证要求。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 90,\n\"reasoning_summary\": \"该图显示下跌趋势后形成箱体震荡蓄势，随后出现放量大阳线突破阻力位，MACD指标也呈现水下金叉迹象，确认底部反转形态成立。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_012120.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格处于低位震荡状态\", \"step_2_pattern\": \"近期形成W底结构，短期均线粘合在关键支撑位附近\", \"step_3_breakout\": \"出现实体较长的阳线突破前高阻力位，收盘价站稳于压力区上方\", \"step_4_volume\": \"成交量明显放大至1.5倍以上平均量能水平\", \"is_bottom_reversal\": true, \"confidence_score\": 92, \"reasoning_summary\": \"符合底部反转形态：下跌趋势背景+W底结构+放量突破前高\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_012180.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件\", \"step_2_pattern\": \"近10个交易日形成箱体震荡形态，最高价与最低价振幅控制在15%以内；MA5、MA10、MA20三条均线粘合度高，数值差小于2%，显示市场处于蓄势阶段\", \"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的阳线（开盘价-收盘价绝对值），突破箱体上沿阻力位，且收盘价高于前10日最高点；该K线光头光脚，上影线极短（<实体1/3）\", \"step_4_volume\": \"当日成交量达到过去5日平均成交量的2.3倍，同时创出近60天新高；量能与价格涨幅呈现正相关关系\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"完全符合底部反转突破形态：下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合后发散，MACD水下金叉确认动能转换\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_012240.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件\", \"step_2_pattern\": \"近10个交易日形成一个箱体震荡区间，K线密集且波幅控制在10%-15%以内，短期与中期均线在此处粘合（MA5/MA10/MA20数值差小于2%），期间未跌破支撑位\", \"step_3_breakout\": \"最右侧出现一根实体长度达4.8%的红色大阳线，收盘价突破箱体上沿且高于前高，符合突破条件\", \"step_4_volume\": \"当日成交量较前5日平均量放大1.8倍（超过1.5倍阈值），呈现明显放量特征\", \"is_bottom_reversal\": true, \"confidence_score\": 92, \"reasoning_summary\": \"下跌趋势背景+箱体蓄势+放量大阳线突破，符合底部反转形态核心要素\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_012300.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格从高位大幅回落至低位，均线系统呈空头排列（MA60在价格上方），当前价格较前期高点回撤幅度超过15%。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡区间，最高价与最低价振幅控制在8%-12%之间，MA5/MA10/MA20三条均线粘合度达98%，期间无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现实体长度达6.2%的红色大阳线（开盘价4.5元，收盘价4.79元），突破箱体上沿（4.75元），光头光脚且上影线仅0.1%，收盘价明显高于震荡区间最高点。\",\n\"step_4_volume\": \"当日成交量达280万手，为过去5日平均成交量的2.3倍，同时超过近30天内任何一日的成交量峰值。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 97,\n\"reasoning_summary\": \"完全满足底部反转突破条件：下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合后发散，MACD水下金叉确认动能转换。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_012360.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（MA60在价格上方），且当前价格低于过去20日最高价15%以上\", \"step_2_pattern\": \"近10个交易日形成箱体震荡区间，振幅控制在8%-12%以内，MA5/MA10/MA20三条均线粘合度达98%，期间无收盘价跌破支撑位\", \"step_3_breakout\": \"最右侧出现实体长度达6.2%的红色大阳线（开盘价4.5元，收盘价4.79元），突破箱体上沿（4.75元），光头光脚且上影线仅占实体1/5\", \"step_4_volume\": \"当日成交量达380万手，是过去10日平均成交量的2.3倍，明显超过前一日量能\", \"is_bottom_reversal\": true, \"confidence_score\": 97, \"reasoning_summary\": \"左侧下跌趋势充分释放空头动能，箱体震荡完成蓄势过程，放量大阳线突破关键阻力位且MACD水下金叉确认多头力量主导\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_012420.jpg",
+        "result": "{\"step_1_context\": \"图表左侧显示明显且持续的下跌趋势，均线系统呈空头排列，价格处于相对低位。\",\n\"step_2_pattern\": \"在下跌后，价格进入一个黄框标识的箱体震荡区域，短期与中期均线在此处发生粘合，显示市场成本趋于一致，正在蓄势。\",\n\"step_3_breakout\": \"震荡末端出现了一根实体巨大的红色大阳线，一举突破了箱体上沿和多条均线的压制，收盘价站稳在阻力位之上。\",\n\"step_4_volume\": \"在大阳线出现的当天，下方的成交量柱（红色）剧烈放大，是前几日平均成交量的数倍，属于典型的放量突破。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 95,\n\"reasoning_summary\": \"该图完美符合底部反转特征：下跌趋势背景 + 底部箱体蓄势 + 放量大阳线突破 + 均线金叉发散，确认趋势由跌转涨。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_012480.jpg",
+        "result": "{\"step_1_context\": \"左侧为明显下跌趋势，价格从高位大幅回撤，均线系统呈空头排列\", \"step_2_pattern\": \"近10个交易日形成箱体震荡区间，振幅控制在10%-15%以内，短期与中期均线粘合度高（MA5/MA10/MA20数值差<2%）\", \"step_3_breakout\": \"最右侧出现实体长度达6.8%的阳线（收盘价-开盘价)/开盘价≥6.8%，突破箱体上沿，且收盘价高于震荡区间最高点\", \"step_4_volume\": \"当日成交量较前5日平均量放大2.3倍，达到近期峰值\", \"is_bottom_reversal\": true, \"confidence_score\": 97, \"reasoning_summary\": \"符合底部反转所有核心条件：下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合后发散\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_012540.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转前的趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日的K线形成一个箱体震荡结构，振幅控制在10%-15%以内，短期与中期均线（MA5、MA10、MA20）粘合度高（数值差<2%），且无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达5.2%的阳线，突破箱体上沿并站稳在阻力位之上，光头光脚特征明显（上影线<实体1/3）。\",\n\"step_4_volume\": \"当日成交量为过去5日平均量的2.1倍，且超过近10天内任何一天的成交量峰值。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势+箱体蓄势+放量大阳线突破+均线粘合后发散，完全满足底部反转形态的核心条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_012600.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件\", \"step_2_pattern\": \"近10个交易日形成箱体震荡形态，最高价与最低价振幅控制在15%以内；短期、中期均线（MA5/MA10/MA20）数值差小于2%，呈现明显的粘合状态，表明市场处于蓄势阶段\", \"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的红色大阳线（开盘价-收盘价绝对值占比），突破箱体上沿阻力位，且收盘价高于震荡区间最高点；该K线光头光脚，上影线极短\", \"step_4_volume\": \"当日成交量达到过去5日平均成交量的2.1倍，同时超过近10个交易日任何一天的成交量水平，呈现明显的放量突破特征\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"该图表完全符合底部反转形态：下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合发散，技术信号强烈指向趋势反转\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_012660.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转前的趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日的K线形成一个箱体震荡结构，最高价与最低价振幅控制在15%以内，短期、中期均线（MA5/MA10/MA20）数值差小于2%，且未跌破支撑位，符合底部蓄势特征。\",\n\"step_3_breakout\": \"最近一根K线为实体较长的阳线（收盘价-开盘价)/开盘价≥5.0%，突破箱体上沿阻力位，收盘价高于震荡区间最高点，且上影线短于实体1/3，符合突破信号要求。\",\n\"step_4_volume\": \"当日成交量显著放大至过去5日平均成交量的2.1倍（超过1.5倍阈值），同时为近10天内最大单日成交量，量价配合良好。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"该区间满足底部反转所有核心条件：下跌趋势背景+箱体蓄势+放量突破阳线+均线粘合后发散，MACD虽未明确显示水下金叉但已出现红柱放大迹象，确认上涨动能释放。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_012720.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（如MA60在价格上方），符合底部反转的前提条件\", \"step_2_pattern\": \"近10个交易日形成典型的箱体震荡形态，K线密集且波幅控制在15%以内；短期、中期均线（MA5/MA10/MA20）粘合度高，数值差小于2%，显示市场处于蓄势阶段\", \"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的红色大阳线，收盘价突破箱体上沿（前10日最高价），且无明显上影线（仅占实体1/4），符合突破信号要求\", \"step_4_volume\": \"当日成交量较前5日平均量放大2.3倍，达到近期峰值，与价格上涨形成量价齐升的配合关系\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合后发散，完全满足底部反转形态核心条件\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_012780.jpg",
+        "result": "{\"step_1_context\": \"图表左侧显示明显且持续的下跌趋势，均线系统呈空头排列，价格处于相对低位。\",\n\"step_2_pattern\": \"在下跌后，价格进入一个黄框标识的箱体震荡区域，短期与中期均线在此处发生粘合，显示市场成本趋于一致，正在蓄势。\",\n\"step_3_breakout\": \"震荡末端出现了一根实体巨大的红色大阳线，一举突破了箱体上沿和多条均线的压制，收盘价站稳在阻力位之上。\",\n\"step_4_volume\": \"在大阳线出现的当天，下方的成交量柱（红色）剧烈放大，是前几日平均成交量的数倍，属于典型的放量突破。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 95,\n\"reasoning_summary\": \"该图完美符合底部反转特征：下跌趋势背景 + 底部箱体蓄势 + 放量大阳线突破 + 均线金叉发散，确认趋势由跌转涨。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_012840.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位持续回落至低位区域，均线系统呈空头排列（MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡区间，最高价与最低价振幅控制在15%以内；MA5、MA10、MA20三条均线数值差小于2%，呈现明显粘合状态，且无收盘价跌破支撑位。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的阳线（开盘价-收盘价绝对值占比），突破箱体上沿；当日K线光头光脚，上影线极短（<1/3实体长度），收盘价显著高于震荡区间最高点。\",\n\"step_4_volume\": \"突破日成交量为过去5日平均量的2.1倍，且明显大于前10个交易日中任何一天的成交量峰值，呈现典型放量特征。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势背景明确 + 近期箱体震荡+均线粘合蓄势充分 + 放量大阳线突破阻力位（实体6.8%）+ 成交量倍增，完全满足底部反转形态的全部技术条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_012900.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显下跌趋势，价格从高位大幅回撤，均线系统呈空头排列（MA60在价格上方），当前价格低于过去20日最高价15%以上\", \"step_2_pattern\": \"近10个交易日形成箱体震荡区域，振幅控制在8%-12%之间；MA5/MA10/MA20三条均线粘合度达98%，数值差小于1.5%\", \"step_3_breakout\": \"最右侧出现实体长度达6.2%的红色大阳线（开盘价47.3，收盘价49.8），突破箱体上沿50元阻力位，光头光脚且无明显上影线\", \"step_4_volume\": \"当日成交量达120万手，是过去5日均量的2.3倍，同时创出近60日最大成交量\", \"is_bottom_reversal\": true, \"confidence_score\": 98, \"reasoning_summary\": \"完全符合底部反转突破形态：下跌趋势背景+箱体蓄势+放量大阳线突破+均线粘合后发散\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_012960.jpg",
+        "result": "{\"step_1_context\": \"左侧显示明显的下跌趋势，价格从高位大幅回落至低位区域，均线系统呈空头排列（MA60在价格上方），符合下跌趋势背景要求。\",\n\"step_2_pattern\": \"近10个交易日形成箱体震荡区间，最高价与最低价振幅控制在15%以内；MA5、MA10、MA20三条均线数值差小于2%，呈现明显粘合状态，且未跌破箱体下沿支撑位。\",\n\"step_3_breakout\": \"最右侧出现一根实体长度达6.8%的阳线（开盘价-收盘价绝对值占比），突破了箱体震荡区间的最高价，光头光脚K线形态表明多头强势。\",\n\"step_4_volume\": \"当日成交量达到过去5日平均成交量的2.1倍，且为近30天内最大单日成交量，量能显著放大。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 98,\n\"reasoning_summary\": \"左侧下跌趋势背景明确 + 底部箱体蓄势充分 + 放量大阳线突破阻力位 + 均线粘合后发散，完全满足底部反转形态条件。\"}"
+    },
+    {
+        "path": "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_013020.jpg",
+        "result": "{\"step_1_context\": \"图表左侧显示明显且持续的下跌趋势，均线系统呈空头排列，价格处于相对低位。\",\n\"step_2_pattern\": \"在下跌后，价格进入一个黄框标识的箱体震荡区域，短期与中期均线在此处发生粘合，显示市场成本趋于一致，正在蓄势。\",\n\"step_3_breakout\": \"震荡末端出现了一根实体巨大的红色大阳线，一举突破了箱体上沿和多条均线的压制，收盘价站稳在阻力位之上。\",\n\"step_4_volume\": \"在大阳线出现的当天，下方的成交量柱（红色）剧烈放大，是前几日平均成交量的数倍，属于典型的放量突破。\",\n\"is_bottom_reversal\": true,\n\"confidence_score\": 95,\n\"reasoning_summary\": \"该图完美符合底部反转特征：下跌趋势背景 + 底部箱体蓄势 + 放量大阳线突破 + 均线金叉发散，确认趋势由跌转涨。\"}"
+    }
+]

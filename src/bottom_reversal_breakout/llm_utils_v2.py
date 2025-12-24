@@ -37,18 +37,6 @@ def analyze_image(image_path):
         print(f"错误：找不到文件 {image_path}")
         exit()
 
-    few_shot_1_path = '/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset/sample3/image.png'
-    few_shot_1_cot = """
-        {
-        "step_1_context": "图表左侧显示明显且持续的下跌趋势，均线系统呈空头排列，价格处于相对低位。",
-        "step_2_pattern": "在下跌后，价格进入一个黄框标识的箱体震荡区域，短期与中期均线在此处发生粘合，显示市场成本趋于一致，正在蓄势。",
-        "step_3_breakout": "震荡末端出现了一根实体巨大的红色大阳线，一举突破了箱体上沿和多条均线的压制，收盘价站稳在阻力位之上。",
-        "step_4_volume": "在大阳线出现的当天，下方的成交量柱（红色）剧烈放大，是前几日平均成交量的数倍，属于典型的放量突破。",
-        "is_bottom_reversal": true,
-        "confidence_score": 95,
-        "reasoning_summary": "该图完美符合底部反转特征：下跌趋势背景 + 底部箱体蓄势 + 放量大阳线突破 + 均线金叉发散，确认趋势由跌转涨。"
-        }
-    """
 
 
     # def get_type(path):
@@ -65,6 +53,21 @@ def analyze_image(image_path):
     start_gen_time = None
 
     print("length:",len(encode_image(image_path)))
+
+    prompt="""
+    “你需要化身为高精度扫描仪。请从左往右，依次找出图中所有的蜡烛线。 对于每一根蜡烛线，请按顺序编号并提供其归一化坐标。
+
+    <think>
+        扫描步骤思考
+    </think>
+
+    输出要求:在输出中不要输出任何无关内容，务必确保编号连续，最后统计总数。
+    <output>
+    <ref>K1</ref><box>[...]</box> [实心绿色 | 空心红色 ]
+    <ref>K2</ref><box>[...]</box> [实心绿色 | 空心红色 ]
+    ... 
+    </output>
+    """
 
     result = ''
     # 记录开始处理的时间
@@ -87,31 +90,12 @@ def analyze_image(image_path):
         ],
         # response_format={"type": "json_object"},
         messages=[
-            {
-                "role": "system",
-                # 使用加强版的 Prompt
-                "content": SYSTEM_PROMPT_2
-            },
             # {
-            #     "role": "user",
-            #     "content": [
-            #         {
-            #             "type": "image_url",
-            #             "image_url": {
-            #                 "url": f"data:{get_type(few_shot_1_path)};base64,{encode_image(few_shot_1_path)}"
-            #             }
-            #         },
-            #         {
-            #             "type": "text",
-            #             "text": "分析这张新图表中黄色框的的区间表现是否满足底部反转形态，并且记忆底部反转形态的股价即将上涨的先决条件或形态，直接输出JSON"
-            #         }
-            #     ]
+            #     "role": "system",
+            #     # 使用加强版的 Prompt
+            #     "content": SYSTEM_PROMPT_2
             # },
-            # {
-            #     "role": "assistant",
-            #     # 确保你的 few_shot_1_cot 是纯净的 JSON 字符串，没有任何Markdown或废话
-            #     "content": few_shot_1_cot
-            # },
+
             {
                 "role": "user",
                 "content": [
@@ -123,8 +107,7 @@ def analyze_image(image_path):
                     },
                     {
                         "type": "text",
-                        # "text": "参考上述示例逻辑以及记忆的底部反转形态的股价即将上涨的先决条件或形态，分析这张新图表中最右侧到最右侧近 10 个交易日的区间表现是否满足底部反转形态的股价即将上涨的先决条件或形态。直接输出JSON。"
-                        "text": "图片是一张股票K线图。请仔细观察图片中的所有细节，根据底部反转形态的股价即将上涨的先决条件，分析这张图表表现是否满足底部反转形态的股价即将上涨的先决条件或形态。直接输出JSON。"
+                        "text": prompt
                     }
                 ]
             }
@@ -188,9 +171,9 @@ def analyze_image(image_path):
 
 
 if __name__ == "__main__":
-    image_path = "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_000000.jpg"
+    image_path = "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_2/image4.png"
     result = analyze_image(image_path)
 
-    image_path = "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_000360.jpg"
-    result = analyze_image(image_path)
+    # image_path = "/mnt/d/projects/stock_v2510/src/bottom_reversal_breakout/dataset_1/sh600031/frame_000360.jpg"
+    # result = analyze_image(image_path)
     print(result)
