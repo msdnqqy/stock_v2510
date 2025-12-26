@@ -1,6 +1,7 @@
 import base64
 import io
 import os
+from re import T
 import time
 
 from PIL import Image
@@ -101,6 +102,29 @@ I'm now checking the solidity of the candlesticks, confirming they're all solid 
 顺序校验： 按照 X 坐标的值对识别出的物体进行降序排列。
 
 翻译输出： 将每一个物体的视觉包围框（Bounding Box）转换成归一化后的数字序列。"""
+
+
+    prompt4 = """你现在是一个高精度视觉提取引擎。
+任务：识别图中红色数字 11 到 22 对应的蜡烛线属性。
+
+规则定义（必须严格遵守）：
+1. 识别顺序：必须按照红色数字 11, 12, 13... 的递增顺序识别。
+2. 属性判定：绿色柱子 = <color>绿色</color> <solid>实心</solid>；红色柱子 = <color>红色</color>。
+3. 坐标要求：提供蜡烛线（含上下影线）的 [ymin, xmin, ymax, xmax] 的坐标。
+
+<think>
+1. 定位数字 N 的位置。
+2. 寻找数字 N 垂直正上方的蜡烛线实体。
+3. 测量该实体的边界框。
+4. 记录颜色和填充。
+</think>
+
+输出格式要求：
+直接按顺序输出结果，不要包含任何总结性废话。
+<output>
+<ref>K1</ref><box>[...]</box> <color>...</color> <tag>数字 N 的值</tag>
+...
+</output>"""
     result = ''
     # 记录开始处理的时间
     start_process_time = time.time()
@@ -109,6 +133,7 @@ I'm now checking the solidity of the candlesticks, confirming they're all solid 
         stream=True,
         model="qwen3-vl",
         temperature=0.0,  # 保持低温
+        top_p=0.1,
         # 【核心修改】加入重复惩罚
         frequency_penalty=1.5,  # 防止复读
         presence_penalty=0.1,  # 【改为0】不要惩罚话题重复，JSON需要重复Key
@@ -139,7 +164,8 @@ I'm now checking the solidity of the candlesticks, confirming they're all solid 
                     },
                     {
                         "type": "text",
-                        "text": prompt + prompt3
+                        # "text": prompt + prompt3
+                        "text": prompt4
                     }
                 ]
             }
