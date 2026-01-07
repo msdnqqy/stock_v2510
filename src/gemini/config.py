@@ -1,0 +1,2 @@
+API_KEY = 'AIzaSyDGuaY6oPRQ5gsvqxLRBbJx4apuFk_Iq1g'
+API_KEY_TEST = 'AIzaSyDScH4ItQI5_k9mDbHux4GKyVayTmhYvYk'
