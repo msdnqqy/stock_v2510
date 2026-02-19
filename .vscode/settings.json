@@ -1,0 +1,12 @@
+{
+  "python.defaultInterpreterPath": "/home/shangong/.pyenv/versions/3.12.11/bin/python",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.completeFunctionParens": true,
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.parameterHints.enabled": true,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  }
+}
